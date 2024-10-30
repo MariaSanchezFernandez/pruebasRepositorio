@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: 200vh; /* Asegúrate de que haya suficiente altura para hacer scroll */
+    background-color: #FFFFFC; /* Color inicial */
+    transition: background-color 1s ease; /* Transición suave para el fondo */
+}
+section {
+    height: 100vh; /* Cada sección ocupa toda la altura de la ventana */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    color: white;
+}
+
+footer{
+    height: 20px;
+}
+
+.presentacion{
+    background-color: antiquewhite;
+}
+.cv{
+    background-color: #000;
+}
+.proyectos{
+    background-color: antiquewhite;
+}
+.formulario{
+    background-color: #000;
+}
+.footer{
+
+}
