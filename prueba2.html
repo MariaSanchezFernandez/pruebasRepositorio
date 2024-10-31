@@ -16,10 +16,18 @@
     </header>
     <div class="container">
         <section class="section inicio">
-            <h3>María Sánchez Fernández</h3>
+            <div>
+                <h3>María Sánchez Fernández</h3>
+
+            </div>
+            <div>
+                <img src="./img/flecha.png">
+            </div>
+
         </section>
+
         <section class="section presentacion">
-            
+            <h1>Aqui va todo el texto sobre mi y la foto</h1>
         </section>
         <section class="section cv">
             <h1>CV
@@ -38,7 +46,7 @@
         <section class="section formulario">
             <h1>Formulario de contacto</h1>
         </section>
-        <footer class="section footer">
+        <footer class="footer">
             <h1>Redes sociales y demás</h1>
         </footer>
     </div>
@@ -125,17 +133,7 @@
             }
         });
 
-        gsap.to("body", {
-            "--color": "white",
-            immediateRender: false,
-            scrollTrigger: {
-                trigger: ".footer",
-                scroller: ".container",
-                scrub: true,
-                start: "top bottom",
-                end: "top top"
-            }
-        });
+        
 
         // Sincronizar Locomotive Scroll con ScrollTrigger
         locoScroll.on("scroll", ScrollTrigger.update);

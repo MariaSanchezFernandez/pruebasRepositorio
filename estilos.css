@@ -39,7 +39,10 @@ header {
     justify-content: center;
     align-items: center;
 }
-
+.inicio{
+    display: flex;
+    flex-direction: column;
+}
 .presentacion p {
     margin: 20px 0; /* Espacio entre párrafos */
 }
@@ -61,4 +64,5 @@ header {
 
 .footer {
     color: green;
+    height: 400px;
 }
