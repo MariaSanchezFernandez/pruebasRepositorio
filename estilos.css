@@ -53,16 +53,9 @@ header {
     color: white;
 }
 
-.cv ul {
-    list-style-type: none; /* Eliminar viñetas de la lista */
-    padding: 0; /* Eliminar padding de la lista */
-}
-
-.cv li {
-    margin: 10px 0; /* Espaciado entre elementos de la lista */
-}
-
 .footer {
     color: green;
     height: 400px;
 }
+
+
