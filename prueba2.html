@@ -8,52 +8,32 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollTrigger.min.js"></script>
     <script src="https://unpkg.com/locomotive-scroll/dist/locomotive-scroll.min.js"></script>
-    <style>
-        body, html {
-            padding: 0;
-            margin: 0;
-            overflow: hidden;
-        }
-
-        html {
-            --color: white;
-            height: 100vh;
-
-        }
-
-        body {
-            background: var(--color);
-        }
-
-        .container {
-            overflow: hidden;
-        }
-
-        .section {
-            height: 100vh;
-            text-align: center;
-            line-height: 100vh;
-            font-size: 3em;
-        }
-
-
-
-        .footer{
-            color: green;
-        }
-    </style>
+    <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
+    <header>
+        <p>Cabecera</p>
+    </header>
     <div class="container">
-        <header></header>
-        <section class="section presentacion">
+        <section class="section inicio">
             <h3>María Sánchez Fernández</h3>
         </section>
-        <section class="section cv">
-            <h1>Curriculum</h1>
+        <section class="section presentacion">
+            
         </section>
+        <section class="section cv">
+            <h1>CV
+
+            <a href="cv/CV_MaríaSánchezFdez.pdf" download="CV María Sánchez">
+                <button>
+                <p>CV María</p>
+                </button>
+            </a>
+            </h1>
+        </section>
+        
         <section class="section proyectos">
-            <h1>Aqui van todos los proyectos</h1>
+            <h1>Aquí van todos los proyectos</h1>
         </section>
         <section class="section formulario">
             <h1>Formulario de contacto</h1>
@@ -85,6 +65,18 @@
         });
 
         // Animaciones de color de fondo para cada sección
+        gsap.to("body", {
+            "--color": "white",
+            immediateRender: false,
+            scrollTrigger: {
+                trigger: ".inicio",
+                scroller: ".container",
+                scrub: true,
+                start: "top bottom",
+                end: "top top"
+            }
+        });
+
         gsap.to("body", {
             "--color": "white",
             immediateRender: false,

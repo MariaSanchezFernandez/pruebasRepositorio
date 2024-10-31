@@ -1,35 +1,64 @@
-body {
+body, html {
+    padding: 0;
     margin: 0;
-    font-family: Arial, sans-serif;
-    height: 200vh; /* Asegúrate de que haya suficiente altura para hacer scroll */
-    background-color: #FFFFFC; /* Color inicial */
-    transition: background-color 1s ease; /* Transición suave para el fondo */
+    overflow: hidden; /* To hide scroll bars */
+    height: 100%; /* Ensure full height */
 }
-section {
-    height: 100vh; /* Cada sección ocupa toda la altura de la ventana */
+
+html {
+    --color: white; /* Default background color */
+    height: 100vh; /* Full viewport height */
+}
+
+body {
+    background: var(--color);
+}
+
+header {
+    position: fixed; 
+    top: 0; /* Align to the top */
+    background-color: aqua;
+    left: 0;
+    width: 100%; /* Full width */
+    color: yellow;
+    z-index: 9999; /* Ensure it's on top of other elements */
+    padding: 10px 0; /* Add some padding */
+    text-align: center; /* Center the header text */
+}
+
+.container {
+    overflow: hidden;
+    margin-top: 60px; /* Add margin to account for fixed header height */
+}
+
+.section {
+    height: 100vh; /* Altura total de la sección */
+    padding: 20px; /* Espaciado interno para el contenido */
+    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2em;
+}
+
+.presentacion p {
+    margin: 20px 0; /* Espacio entre párrafos */
+}
+
+.cv {
+    text-align: center; /* Centrar el texto */
+    padding: 20px; /* Espaciado interno para el contenido */
     color: white;
 }
 
-footer{
-    height: 20px;
+.cv ul {
+    list-style-type: none; /* Eliminar viñetas de la lista */
+    padding: 0; /* Eliminar padding de la lista */
 }
 
-.presentacion{
-    background-color: antiquewhite;
+.cv li {
+    margin: 10px 0; /* Espaciado entre elementos de la lista */
 }
-.cv{
-    background-color: #000;
-}
-.proyectos{
-    background-color: antiquewhite;
-}
-.formulario{
-    background-color: #000;
-}
-.footer{
 
+.footer {
+    color: green;
 }
