@@ -1,57 +1,86 @@
 body, html {
     padding: 0;
     margin: 0;
-    overflow: hidden; /* To hide scroll bars */
-    height: 100%; /* Ensure full height */
+    overflow: hidden; 
+    height: 100%; 
 }
 
 html {
-    --color: white; /* Default background color */
-    height: 100vh; /* Full viewport height */
+    --color: white;
+    height: 100vh; 
 }
 
 body {
     background: var(--color);
 }
+/*Cabecera*/
 
 header {
     position: fixed; 
-    top: 0; /* Align to the top */
+    top: 0; 
     background-color: aqua;
     left: 0;
-    width: 100%; /* Full width */
+    width: 100%;
     color: yellow;
-    z-index: 9999; /* Ensure it's on top of other elements */
-    padding: 10px 0; /* Add some padding */
-    text-align: center; /* Center the header text */
+    z-index: 9999; 
+    padding: 10px 0; 
+    text-align: center; 
 }
 
 .container {
     overflow: hidden;
-    margin-top: 60px; /* Add margin to account for fixed header height */
+    margin-top: 60px; 
 }
 
+/*Sections*/
+
 .section {
-    height: 100vh; /* Altura total de la sección */
-    padding: 20px; /* Espaciado interno para el contenido */
+    height: 100vh; 
+    padding: 20px; 
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+/*Inicio*/
+
 .inicio{
     display: flex;
     flex-direction: column;
 }
+
+/*Presentación*/
+
 .presentacion p {
-    margin: 20px 0; /* Espacio entre párrafos */
+    margin: 20px 0;
 }
 
+/*Cv*/
+
 .cv {
-    text-align: center; /* Centrar el texto */
-    padding: 20px; /* Espaciado interno para el contenido */
+    text-align: center;
+    padding: 20px; 
     color: white;
+    display: flex;
+    flex-direction: row;
 }
+
+.izquierda{
+    width: 80%;
+    height: 100vh;
+    background-color: blue;
+}
+
+.botonDescargar{
+    top: 1000px;
+}
+
+.derecha{
+    width: 20%;
+    height: 100vh;
+    background-color: red;
+}
+/*Footer*/
 
 .footer {
     color: green;

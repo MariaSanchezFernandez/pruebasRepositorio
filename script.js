@@ -1,13 +1,12 @@
-        // Registrar plugins de GSAP
         gsap.registerPlugin(ScrollTrigger);
 
-        // Inicializar LocomotiveScroll
+        //Comandos para que al bajar, cambie el fondo de color
+
         const locoScroll = new LocomotiveScroll({
             el: document.querySelector(".container"),
             smooth: true
         });
 
-        // Configurar ScrollTrigger para trabajar con LocomotiveScroll
         ScrollTrigger.scrollerProxy(".container", {
             scrollTop(value) {
                 return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
@@ -18,7 +17,6 @@
             pinType: document.querySelector(".container").style.transform ? "transform" : "fixed"
         });
 
-        // Animaciones de color de fondo para cada sección
         gsap.to("body", {
             "--color": "white",
             immediateRender: false,
@@ -79,8 +77,19 @@
             }
         });
 
-        // Sincronizar Locomotive Scroll con ScrollTrigger
         locoScroll.on("scroll", ScrollTrigger.update);
         ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
 
         ScrollTrigger.refresh();
+
+        //Botón del cv fijo
+
+        ScrollTrigger.create({
+            trigger: ".botonWrapper",
+            scroller: ".container",
+            pin: true,
+            //pinSpacing:false,
+            start: "center center",
+            end: "+=1231",
+            markers: false
+          });
