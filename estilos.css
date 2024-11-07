@@ -13,6 +13,7 @@ html {
 body {
     background: var(--color);
 }
+
 /*Cabecera*/
 
 header {
@@ -27,12 +28,13 @@ header {
     text-align: center; 
 }
 
+/*Section general y Container*/
+
 .container {
     overflow: hidden;
     margin-top: 60px; 
 }
 
-/*Sections*/
 
 .section {
     height: 100vh; 
@@ -58,6 +60,7 @@ header {
 /*Cv*/
 
 .cv {
+    
     text-align: center;
     padding: 20px; 
     color: white;
@@ -66,9 +69,11 @@ header {
 }
 
 .izquierda{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 80%;
     height: 100vh;
-    background-color: blue;
 }
 
 .botonDescargar{
@@ -76,15 +81,18 @@ header {
 }
 
 .derecha{
+
     width: 20%;
     height: 100vh;
-    background-color: red;
+    border-style: hidden hidden hidden dashed;
+    border-width: 1px;
+    z-index: 9999999;   
 }
+
 /*Footer*/
 
 .footer {
     color: green;
     height: 400px;
 }
-
 
