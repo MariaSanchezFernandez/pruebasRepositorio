@@ -143,12 +143,13 @@ header {
 .sliderPrincipal {
     width: 100%;
     overflow: hidden;
-    position: relative;
+    position: relative;mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), black 10%, black 90%, rgba(0, 0, 0, 0));
+    -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), black 10%, black 90%, rgba(0, 0, 0, 0));
 }
 
 .sliderImagenesArriba, .sliderImagenesAbajo {
-    display: flex;
-    width: 100%;
+    animation-play-state: paused;
+
 }
 
 .slider {
@@ -165,6 +166,7 @@ header {
     margin-left: 20px;
 }
 
+/* Animaciones separadas para los sliders */
 @keyframes slide-animationArriba {
     0% {
         transform: translateX(0);
@@ -184,12 +186,15 @@ header {
 }
 
 .sliderImagenesArriba {
-    animation: slide-animationArriba 50s infinite linear;
+    animation: slide-animationArriba 40s infinite linear;
+    animation-play-state: paused; 
 }
 
 .sliderImagenesAbajo {
-    animation: slide-animationAbajo 50s infinite linear;
+    animation: slide-animationAbajo 60s infinite linear; 
+    animation-play-state: paused; 
 }
+
 
 .sliderPrincipal:hover .sliderImagenesArriba {
     animation-play-state: paused;

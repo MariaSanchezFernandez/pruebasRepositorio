@@ -152,22 +152,25 @@ enlaces.forEach(enlace => {
     actualizarEstado();
   });
 
-const sliderImagenesArriba = document.querySelector('.sliderImagenesArriba .slider');
-const sliderImagenesAbajo = document.querySelector('.sliderImagenesAbajo .slider');
+  // Seleccionar los sliders individuales
+const sliderArriba = document.querySelector('.sliderImagenesArriba');
+const sliderAbajo = document.querySelector('.sliderImagenesAbajo');
 
-function duplicarImagenes() {
-    const imagesArriba = sliderImagenesArriba.children;
-    const imagesAbajo = sliderImagenesAbajo.children;
-    
-    Array.from(imagesArriba).forEach(img => {
-        const clone = img.cloneNode(true); 
-        sliderImagenesArriba.appendChild(clone); 
-    });
-
-    Array.from(imagesAbajo).forEach(img => {
-        const clone = img.cloneNode(true); 
-        sliderImagenesAbajo.appendChild(clone); 
-    });
+// Función para pausar y reanudar animaciones de los sliders
+function manejarHoverSlider(slider, estado) {
+    slider.style.animationPlayState = estado;
 }
 
-window.onload = duplicarImagenes;
+// Eventos para el slider de arriba
+sliderArriba.addEventListener('mouseenter', () => manejarHoverSlider(sliderArriba, 'running'));
+sliderArriba.addEventListener('mouseleave', () => manejarHoverSlider(sliderArriba, 'paused'));
+
+// Eventos para el slider de abajo
+sliderAbajo.addEventListener('mouseenter', () => manejarHoverSlider(sliderAbajo, 'running'));
+sliderAbajo.addEventListener('mouseleave', () => manejarHoverSlider(sliderAbajo, 'paused'));
+
+// Pausar ambos sliders al cargar la página
+window.onload = () => {
+    manejarHoverSlider(sliderArriba, 'paused');
+    manejarHoverSlider(sliderAbajo, 'paused');
+};
