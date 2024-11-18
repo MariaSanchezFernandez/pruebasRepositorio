@@ -1,8 +1,24 @@
 gsap.registerPlugin(ScrollTrigger);
     
+// para que funciones los link de la cabecera, si hago de manera normal se rompe el locomotive por lo que debería hacer el scroll desde el script
+const enlaces = document.querySelectorAll('.cabecera');
+
+enlaces.forEach(enlace => {
+    enlace.addEventListener('click', (event) => {
+        event.preventDefault();
+        
+        const targetId = event.target.getAttribute('href').substring(1);
+        
+        const targetSection = document.getElementById(targetId);
+
+        locoScroll.scrollTo(targetSection);
+
+        ScrollTrigger.update();
+    });
+});
+
 //Comandos para que al bajar, cambie el fondo de color entre blanco y negro por distintas
 
-  
     const locoScroll = new LocomotiveScroll({
         el: document.querySelector(".container"),
         smooth: true
@@ -78,6 +94,7 @@ gsap.registerPlugin(ScrollTrigger);
         }
     });
 
+    
     locoScroll.on("scroll", ScrollTrigger.update);
     ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
 
@@ -95,9 +112,56 @@ gsap.registerPlugin(ScrollTrigger);
         markers: false
         });
 
-        
-        let confetti = new Confetti('descargarCv');
-        
+    //Confetti   
+    let confetti = new Confetti('descargarCv');
 
-        
+    const descargarCvBtn = document.getElementById('descargarCv');
+  const cvLink = document.getElementById('cvLink');
+
+  let descargas = parseInt(localStorage.getItem('cvDescargas')) || 0;
+
+  function actualizarEstado() {
+    if (descargas >= 2) {
+      cvLink.removeAttribute('href');
+      cvLink.style.pointerEvents = 'none';
+      descargarCvBtn.textContent = '¡Gracias por descargarlo!';
+      descargarCvBtn.disabled = true;
+    } else {
+      descargarCvBtn.textContent = descargas === 1 ? 'Volver a descargar CV' : 'Descargar CV'; 
+      cvLink.href = "cv/CV_MaríaSánchezFdez.pdf";
+      cvLink.style.pointerEvents = 'auto';
+      descargarCvBtn.disabled = false;
+    }
+  }
+
+  actualizarEstado();
+
+  descargarCvBtn.addEventListener('click', (event) => {
+    if (descargas < 2) {
+      descargas++;
+      localStorage.setItem('cvDescargas', descargas);
+
+      if (descargas === 2) {
+        event.preventDefault();
+        alert('Gracias por descargar el CV. Ya no puedes descargarlo más.');
+      } else {
+        alert('Gracias por descargar el CV. Puedes volver a descargarlo una vez más.');
+      }
+    }
+
+    actualizarEstado();
+  });
+
+  const slider = document.querySelector('.sliderImagenesArriba');
+const sliderContainer = document.querySelector('.sliderPrincipal');
+
+// Inicia el movimiento al hacer hover
+sliderContainer.addEventListener('mouseenter', () => {
+  slider.style.animationPlayState = 'running';
+});
+
+// Detiene el movimiento al quitar el hover
+sliderContainer.addEventListener('mouseleave', () => {
+  slider.style.animationPlayState = 'paused';
+});
 

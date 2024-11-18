@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>/* Contenedor principal */
+        .slider-container {
+          width: 100%;          /* Ancho completo */
+          height: 300px;        /* Altura del slider */
+          overflow: hidden;     /* Oculta los slides fuera del área visible */
+          position: relative;
+        }
+        
+        /* El slider que contiene las imágenes */
+        .slider {
+          display: flex;        /* Usamos flexbox para alinear los slides horizontalmente */
+          width: max-content;   /* Ancho flexible para que se ajuste al contenido */
+          animation: slide-animation 10s linear infinite; /* Animación continua */
+        }
+        
+        /* Estilo de cada slide */
+        .slide {
+          min-width: 100%;      /* Cada slide ocupa el 100% del contenedor */
+          height: 100%;         /* Altura completa del contenedor */
+          background-color: #ddd; /* Color de fondo de ejemplo */
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 24px;
+          text-align: center;
+        }
+        
+        /* Animación de desplazamiento hacia la derecha */
+        @keyframes slide-animation {
+          0% {
+            transform: translateX(0);  /* Inicia en la posición original */
+          }
+          100% {
+            transform: translateX(-100%); /* Mueve el slider hacia la izquierda, todo el ancho de un slide */
+          }
+        }
+        
+        /* Hover para iniciar la animación */
+        .slider-container:hover .slider {
+          animation-play-state: running; /* Inicia la animación al hacer hover */
+        }
+        
+        .slider-container .slider {
+          animation-play-state: paused; /* Pausa la animación cuando no se hace hover */
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="slider-container">
+        <div class="slider">
+          <div class="slide">Slide 1</div>
+          <div class="slide">Slide 2</div>
+          <div class="slide">Slide 3</div>
+          <div class="slide">Slide 4</div>
+        </div>
+      </div>
+      <script>
+        const slider = document.querySelector('.slider');
+const slides = document.querySelectorAll('.slide');
+const slideWidth = slides[0].offsetWidth;  // Ancho de cada slide
+
+// Duplicar los slides para hacerlo infinito
+slider.innerHTML += slider.innerHTML;
+
+// Controlar el movimiento en el hover
+let isHovering = false;
+
+slider.addEventListener('transitionend', () => {
+  if (isHovering) {
+    slider.style.transition = 'none';
+    slider.style.transform = 'translateX(0)';
+    setTimeout(() => {
+      slider.style.transition = 'transform 0.5s ease-in-out';
+    });
+  }
+});
+
+// Mover el slider al hacer hover
+document.querySelector('.slider-container').addEventListener('mouseenter', () => {
+  isHovering = true;
+  slider.style.transition = 'transform 0.5s ease-in-out';
+  slider.style.transform = `translateX(-${slideWidth}px)`;  // Mover hacia la izquierda
+});
+
+// Detener el movimiento al quitar el hover
+document.querySelector('.slider-container').addEventListener('mouseleave', () => {
+  isHovering = false;
+  slider.style.transition = 'transform 0.5s ease-in-out';
+  slider.style.transform = 'translateX(0)';
+});
+
+      </script>
+</body>
+</html>

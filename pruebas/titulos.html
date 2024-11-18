@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+
+<h1 id="titulo">¡Letras moviéndose en todas direcciones!</h1>
+
+<script>
+  anime({
+    targets: '#titulo span', // Este efecto requiere envolver cada letra en un <span>
+    translateX: function() { return anime.random(-50, 50); },
+    translateY: function() { return anime.random(-50, 50); },
+    rotate: function() { return anime.random(-360, 360); },
+    opacity: [0, 1],
+    easing: 'easeOutExpo',
+    duration: 2000,
+    delay: anime.stagger(100) // Retraso entre cada letra
+  });
+</script>
+
+    
+</body>
+</html>

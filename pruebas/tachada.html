@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hover Palabra</title>
+  <style>
+    body {
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+    }
+
+    .word {
+      font-size: 2rem;
+      position: relative; /* Necesario para el pseudo-elemento */
+      color: black;
+    }
+
+    .word::after {
+      content: ''; 
+      position: absolute;
+      left: 0;
+      height: 2px; /* Grosor de la línea */
+      background: black;
+      transition: all 0.3s ease-in-out; /* Transición suave */
+      
+      /* Posición inicial: línea tachada */
+      width: 100%;
+      top: 50%; /* En el centro del texto (tachado) */
+      transform: translateY(-50%);
+    }
+
+    .word:hover::after {
+      top: 90%; /* Se mueve a la parte inferior (subrayado) */
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+  <p class="word">Tachada</p>
+</body>
+</html>

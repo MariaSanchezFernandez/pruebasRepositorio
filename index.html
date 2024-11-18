@@ -14,9 +14,9 @@
 </head>
 <body>
     <header>
-        <p>Cv</p>
-        <p>Proyectos</p>
-        <p>Contacto</p>
+        <a href="#curriculum" class="cabecera">Cv</a>
+        <a href="#proyectos" class="cabecera">Proyectos</a>
+        <a href="#contacto" class="cabecera">Contacto</a>        
     </header>
     <div class="container">
         <section class="section inicio">
@@ -33,29 +33,114 @@
         <section class="section presentacion">
             <h1>Aqui va todo el texto sobre mi y la foto</h1>
         </section>
-        <section class="section cv">
-        <!--  -->
+
+        <section id="curriculum" class="section cv">
             <div class="izquierda">
-                <p>hola</p>
+                <h2>Titulaciones</h2>
+                <div class="infoCvDetalle">
+                    <div class="textoYcalendario">
+                        <p>Bto. Ciencias Sociales  -  IES San Juan de la Cruz</p>
+                        <div class="calendario">
+                            <img src="./img/calendario.png" alt="">
+                            <p>Sept 2021 - Junio 2023</p>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>Habilidades críticas y sociales</li>
+                    </ul>
+                    <div class="textoYcalendario">
+                        <p>Grado Superior en DAM  -  Escuela Estech</p>
+                        <div class="calendario">
+                            <img src="./img/calendario.png" alt="">
+                            <p>Sept 2023 - Junio 2025</p>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>Comprension en competencias en programación, diseño y desarrollo de aplicaciones para diferentes plataformas, optimizando la experiencia del usuario.</li>
+                    </ul>
+                </div>
+                <h2>Experiencia</h2>
+                <div class="infoCvDetalle">
+                    <div class="textoYcalendario">
+                        <p>Ayudante de cocina  -  Playa Hoteles, Roquetas de Mar</p>
+                        <div class="calendario">
+                            <img src="./img/calendario.png" alt="">
+                            <p>Junio 2024 - Sept 2024</p>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>Aprendizaje de habiliades como atención al cliente, resolución de problemas de manera efectiva bajo presión, trabajo en equipo o tareas de responsabilidad.</li>
+                    </ul>
+                </div>
+        
+                <h2>Habilidades</h2>
+                <div class="infoCvDetalle">
+                    <p>Idiomas</p>
+                    <ul>
+                        <li>Español - Nativo - Hablado y escrito</li>
+                        <li>Inglés - Intermedio/Alto - B2 First Cambridge - Hablado y escrito</li>
+                    </ul>
+                    <p>Movilidad</p>
+                    <ul>
+                        <li>Movilidad nacional e internacional total</li>
+                    </ul>
+                </div>
+                <h2>Herramientas</h2>
+                <div>
+                    <div class="sliderPrincipal">
+                        <div class="sliderImagenesArriba"> 
+                            <div class="slider">
+                                <img src="./img/Kotlin.png" alt="Kotlin">
+                                <img src="./img/Swift.png" alt="Swift">
+                                <img src="./img/Java.png" alt="Java">
+                                <img src="./img/React.png" alt="React">
+                                <img src="./img/Bootstrap.png" alt="Bootstrap">
+                                <img src="./img/js.png" alt="JavaScript">
+                                <img src="./img/Html5.png" alt="HTML5">
+                                <img src="./img/Css3.png" alt="CSS3">
+                                <img src="./img/Laravel.png" alt="Laravel">
+                                <img src="./img/php.png" alt="PHP">
+                            </div>
+                        </div>
+                        <div class="sliderImagenesAbajo"> 
+                            <div class="slider">
+                                <img src="./img/androids.png" alt="Android">
+                                    <img src="./img/sql.png" alt="SQL">
+                                    <img src="./img/wordpress.png" alt="WordPress">
+                                    <img src="./img/Figma.png" alt="Figma">
+                                    <img src="./img/vst.png" alt="Visual Studio">
+                                    <img src="./img/idea.png" alt="IDEA">
+                                    <img src="./img/xcode.png" alt="Xcode">
+                                    <img src="./img/postman.png" alt="Postman">
+                                    <img src="./img/Docker.png" alt="Docker">
+                                    <img src="./img/git.png" alt="Git">
+                            </div>
+                        </div>        
+                    </div>
+                </div>                           
             </div>
+
             <div class="derecha">
                 <div class="botonWrapper">
-                    <a href="cv/CV_MaríaSánchezFdez.pdf" download="CV María Sánchez">
+                    <a href="cv/CV_MaríaSánchezFdez.pdf" download="CV María Sánchez" id="cvLink">
                     <button class="botonDescargar" id="descargarCv">Descargar cv</button>
                     </a>
                 </div>
             </div>
         </section>
-        
-        <section class="section proyectos">
+
+        <section id="proyectos" class="section proyectos">
             <h1>Aquí van todos los proyectos</h1>
         </section>
-        <section class="section formulario">
+
+        <section id="contacto" class="section formulario">
             <h1>Formulario de contacto</h1>
         </section>
+
         <footer class="footer">
             <h1>Redes sociales y demás</h1>
         </footer>
+
     </div>
     <script src="./confetti.min.js"></script>
     <script src="./script.js"></script>

@@ -9,6 +9,7 @@ body, html {
 html {
     --color: white;
     height: 100vh; 
+    scroll-behavior: smooth;
 }
 
 body {
@@ -16,34 +17,44 @@ body {
 }
 
 /*Cabecera https://kennethnym.com/blog/progressive-blur-in-css/*/
-
 header {
     display: flex;
     flex-direction: row;
     justify-content: end;
     position: fixed;
-    text-decoration: line-through;
-
     backdrop-filter: blur(10px);
     left: 0;
     width: 100%;
-    color: yellow;
     z-index: 9999; 
     padding: 10px 0; 
     text-align: center; 
 }
-header>p{
-    margin: 10px 40px 10px 40px;
+
+.cabecera {
+    margin: 10px 40px;
     font-size: 20px;
-}
-header>p:hover{
-    transition: 2s;
-    text-decoration: underline;
+    position: relative;
+    color: black;
+    text-decoration: none; 
+    cursor: pointer; 
 }
 
-header::after{
-    transition: 0.3s ease;
+.cabecera::after {
+    content: ''; 
+    position: absolute;
+    left: 0;
+    height: 2px;
+    background-color: black;
+    width: 100%; 
+    transition: all 0.3s ease-in-out; 
 
+    top: 50%; 
+    transform: translateY(-50%);
+}
+
+.cabecera:hover::after {
+    top: 100%; 
+    transform: translateY(0);
 }
 
 /*Section general y Container*/
@@ -78,8 +89,6 @@ header::after{
 /*Cv*/
 
 .cv {
-    
-    text-align: center;
     padding: 20px; 
     color: white;
     display: flex;
@@ -87,13 +96,42 @@ header::after{
 }
 
 .izquierda{
+    padding: 100px 40px 40px 40px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: flex-start;
+    text-align: left;
     width: 80%;
     height: 100vh;
 }
+.izquierda>h2{
+    text-decoration: underline;
+    text-decoration-color: #0ACF83;
+    text-decoration-thickness:3px;
 
+}
+.infoCvDetalle{
+    margin-left: 50px;
+}
+.textoYcalendario{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.calendario{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.calendario>p{
+    margin-left: 10px;
+}
+.calendario>img{
+    width: 30px;
+    height: 33px;
+}
 .botonDescargar{
     top: 1000px;
     cursor: pointer;
@@ -101,8 +139,62 @@ header::after{
 
 }
 
-.derecha{
+.sliderPrincipal{
+    width: 100%;          /* Ancho completo */
+    height: 300px;        /* Altura del slider */
+    overflow: hidden;     /* Oculta los slides fuera del área visible */
+    position: relative;
+}
+.sliderImagenesArriba{
+    display: flex;        /* Usamos flexbox para alinear los slides horizontalmente */
+    width: max-content;   /* Ancho flexible para que se ajuste al contenido */
+    animation: slide-animationArriba 10s linear infinite; 
+}
+.sliderImagenesArriba{
+    display: flex;        /* Usamos flexbox para alinear los slides horizontalmente */
+    width: max-content;   /* Ancho flexible para que se ajuste al contenido */
+    animation: slide-animationAbajo 10s linear infinite; 
+}
+.slider{
+    min-width: 100%;      /* Cada slide ocupa el 100% del contenedor */
+    height: 100%;         /* Altura completa del contenedor */
+    background-color: #ddd; /* Color de fondo de ejemplo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    text-align: center;
+}
+.slider>img{
+    height: 39px;
+}
+@keyframes slide-animationArriba {
+    0% {
+      transform: translateX(0);  /* Inicia en la posición original */
+    }
+    100% {
+      transform: translateX(-100%); /* Mueve el slider hacia la izquierda, todo el ancho de un slide */
+    }
+}
 
+@keyframes slide-animationAbajo {
+    0% {
+      transform: translateX(-100%);  /* Inicia en la posición original */
+    }
+    100% {
+      transform: translateX(0); /* Mueve el slider hacia la izquierda, todo el ancho de un slide */
+    }
+}
+
+  .slider-container:hover .slider {
+    animation-play-state: running; /* Inicia la animación al hacer hover */
+  }
+  
+  .slider-container .slider {
+    animation-play-state: paused; /* Pausa la animación cuando no se hace hover */
+  }
+.derecha{
+    text-align: center;
     width: 20%;
     height: 100vh;
     border-style: hidden hidden hidden dashed;
@@ -110,6 +202,12 @@ header::after{
     z-index: 9999999;   
 }
 
+/*Diseño desponsive para modificar el botón*/
+@media screen and (max-width:800px) {
+    .derecha{
+        display: none;
+    }
+} 
 /*Footer*/
 
 .footer {
