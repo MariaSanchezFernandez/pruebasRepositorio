@@ -1,11 +1,7 @@
-    gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger);
+    
+//Comandos para que al bajar, cambie el fondo de color entre blanco y negro por distintas
 
-
-        //Comandos para que al bajar, cambie el fondo de color entre blanco y negro por distintas
-
-    const isMobile = window.innerWidth <= 768; // Definir que el tamaño máximo para móviles es 768px
-
-if (!isMobile) {
   
     const locoScroll = new LocomotiveScroll({
         el: document.querySelector(".container"),
@@ -95,8 +91,13 @@ if (!isMobile) {
         pin: true,
         //pinSpacing:false,
         start: "center center",
-        end :isMobile ? "+=500" : "+=1231",
+        end :"+=100%",
         markers: false
         });
 
-}
+        
+        let confetti = new Confetti('descargarCv');
+        
+
+        
+
