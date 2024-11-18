@@ -15,18 +15,35 @@ body {
     background: var(--color);
 }
 
-/*Cabecera*/
+/*Cabecera https://kennethnym.com/blog/progressive-blur-in-css/*/
 
 header {
-    position: fixed; 
-    top: 0; 
-    background-color: aqua;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    position: fixed;
+    text-decoration: line-through;
+
+    backdrop-filter: blur(10px);
     left: 0;
     width: 100%;
     color: yellow;
     z-index: 9999; 
     padding: 10px 0; 
     text-align: center; 
+}
+header>p{
+    margin: 10px 40px 10px 40px;
+    font-size: 20px;
+}
+header>p:hover{
+    transition: 2s;
+    text-decoration: underline;
+}
+
+header::after{
+    transition: 0.3s ease;
+
 }
 
 /*Section general y Container*/
