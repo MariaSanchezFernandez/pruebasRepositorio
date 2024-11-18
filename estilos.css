@@ -36,7 +36,7 @@ header {
     margin: 10px 40px;
     font-size: 20px;
     position: relative;
-    color: black;
+    color: yellow;
     text-decoration: none; 
     cursor: pointer; 
 }
@@ -44,10 +44,10 @@ header {
 .cabecera::after {
     content: ''; 
     position: absolute;
-    left: 0;
+    left: -10%;
     height: 2px;
-    background-color: black;
-    width: 100%; 
+    background-color: yellow;
+    width: 120%;
     transition: all 0.3s ease-in-out; 
 
     top: 50%; 
