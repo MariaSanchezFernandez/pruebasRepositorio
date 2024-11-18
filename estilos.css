@@ -138,74 +138,70 @@ header {
     transition: opacity 2s ease;
 
 }
+
 /* Contenedor principal del slider */
 .sliderPrincipal {
     width: 100%;
-    height: 300px;
     overflow: hidden;
     position: relative;
 }
 
 .sliderImagenesArriba, .sliderImagenesAbajo {
     display: flex;
-    width: max-content;
-    animation: animacion 50s linear infinite;
-
+    width: 100%;
 }
 
 .slider {
+    display: flex;
     min-width: 100%;
     height: 100%;
-    display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 24px;
-    text-align: center;
     margin-bottom: 20px;
 }
 
 .slider > img {
     height: 39px;
+    margin-left: 20px;
 }
 
 @keyframes slide-animationArriba {
     0% {
-        transform: translateX(0);  /* Empieza en la posición inicial */
+        transform: translateX(0);
     }
     100% {
-        transform: translateX(-100%); /* Mueve el slider hacia la izquierda */
+        transform: translateX(-100%);
     }
 }
 
-/* Animación para el slider que se mueve a la derecha */
 @keyframes slide-animationAbajo {
     0% {
-        transform: translateX(0);  /* Empieza en la posición inicial */
+        transform: translateX(0);
     }
     100% {
-        transform: translateX(100%); /* Mueve el slider hacia la derecha */
+        transform: translateX(100%);
     }
 }
 
-/* Animación de la parte superior (hacia la izquierda) */
 .sliderImagenesArriba {
-    animation: slide-animationArriba 10s infinite; /* Movimiento hacia la izquierda */
+    animation: slide-animationArriba 50s infinite linear;
 }
 
-/* Animación de la parte inferior (hacia la derecha) */
 .sliderImagenesAbajo {
-    animation: slide-animationAbajo 10s infinite; /* Movimiento hacia la derecha */
+    animation: slide-animationAbajo 50s infinite linear;
 }
 
-/* Hover para pausar las animaciones */
-.slider-container:hover .sliderImagenesArriba,
-.slider-container:hover .sliderImagenesAbajo {
-    animation-play-state: paused; /* Pausa las animaciones cuando no se hace hover */
+.sliderPrincipal:hover .sliderImagenesArriba {
+    animation-play-state: paused;
 }
 
-.slider-container .sliderImagenesArriba,
-.slider-container .sliderImagenesAbajo {
-    animation-play-state: running; /* Inicia las animaciones cuando se hace hover */
+.sliderPrincipal:hover .sliderImagenesAbajo {
+    animation-play-state: paused; 
+}
+
+.sliderPrincipal .sliderImagenesArriba,
+.sliderPrincipal .sliderImagenesAbajo {
+    animation-play-state: running;
 }
 
 .derecha{

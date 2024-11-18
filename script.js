@@ -152,16 +152,25 @@ enlaces.forEach(enlace => {
     actualizarEstado();
   });
 
-  const slider = document.querySelector('.sliderImagenesArriba');
-const sliderContainer = document.querySelector('.sliderPrincipal');
+  // Obtener los contenedores de las imágenes
+const sliderImagenesArriba = document.querySelector('.sliderImagenesArriba .slider');
+const sliderImagenesAbajo = document.querySelector('.sliderImagenesAbajo .slider');
 
-// Inicia el movimiento al hacer hover
-sliderContainer.addEventListener('mouseenter', () => {
-  slider.style.animationPlayState = 'running';
-});
+// Función para duplicar las imágenes
+function duplicarImagenes() {
+    const imagesArriba = sliderImagenesArriba.children;
+    const imagesAbajo = sliderImagenesAbajo.children;
+    
+    Array.from(imagesArriba).forEach(img => {
+        const clone = img.cloneNode(true); // Clonamos la imagen
+        sliderImagenesArriba.appendChild(clone); // Añadimos el clon al contenedor
+    });
 
-// Detiene el movimiento al quitar el hover
-sliderContainer.addEventListener('mouseleave', () => {
-  slider.style.animationPlayState = 'paused';
-});
+    Array.from(imagesAbajo).forEach(img => {
+        const clone = img.cloneNode(true); // Clonamos la imagen
+        sliderImagenesAbajo.appendChild(clone); // Añadimos el clon al contenedor
+    });
+}
 
+// Llamamos a la función al cargar la página
+window.onload = duplicarImagenes;
