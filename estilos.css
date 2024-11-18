@@ -3,6 +3,8 @@ body, html {
     margin: 0;
     overflow: hidden; 
     height: 100%; 
+    font-family: "Inter", sans-serif;
+
     background: none;
 }
 
@@ -139,11 +141,14 @@ header {
 
 }
 
+
 /* Contenedor principal del slider */
 .sliderPrincipal {
     width: 100%;
     overflow: hidden;
-    position: relative;mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), black 10%, black 90%, rgba(0, 0, 0, 0));
+    position: relative;
+    right: 0;
+    mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), black 10%, black 90%, rgba(0, 0, 0, 0));
     -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), black 10%, black 90%, rgba(0, 0, 0, 0));
 }
 
