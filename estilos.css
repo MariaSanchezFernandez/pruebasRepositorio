@@ -98,7 +98,7 @@ header {
 }
 
 .izquierda{
-    padding: 100px 60px 40px 40px;
+    padding: 60px;
     display: flex;
     flex-direction: column;
     justify-content: center;
