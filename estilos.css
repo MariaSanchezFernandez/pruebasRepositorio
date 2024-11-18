@@ -138,61 +138,76 @@ header {
     transition: opacity 2s ease;
 
 }
-
-.sliderPrincipal{
-    width: 100%;          /* Ancho completo */
-    height: 300px;        /* Altura del slider */
-    overflow: hidden;     /* Oculta los slides fuera del área visible */
+/* Contenedor principal del slider */
+.sliderPrincipal {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
     position: relative;
 }
-.sliderImagenesArriba{
-    display: flex;        /* Usamos flexbox para alinear los slides horizontalmente */
-    width: max-content;   /* Ancho flexible para que se ajuste al contenido */
-    animation: slide-animationArriba 10s linear infinite; 
+
+.sliderImagenesArriba, .sliderImagenesAbajo {
+    display: flex;
+    width: max-content;
+    animation: animacion 50s linear infinite;
+
 }
-.sliderImagenesArriba{
-    display: flex;        /* Usamos flexbox para alinear los slides horizontalmente */
-    width: max-content;   /* Ancho flexible para que se ajuste al contenido */
-    animation: slide-animationAbajo 10s linear infinite; 
-}
-.slider{
-    min-width: 100%;      /* Cada slide ocupa el 100% del contenedor */
-    height: 100%;         /* Altura completa del contenedor */
-    background-color: #ddd; /* Color de fondo de ejemplo */
+
+.slider {
+    min-width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 24px;
     text-align: center;
+    margin-bottom: 20px;
 }
-.slider>img{
+
+.slider > img {
     height: 39px;
 }
+
 @keyframes slide-animationArriba {
     0% {
-      transform: translateX(0);  /* Inicia en la posición original */
+        transform: translateX(0);  /* Empieza en la posición inicial */
     }
     100% {
-      transform: translateX(-100%); /* Mueve el slider hacia la izquierda, todo el ancho de un slide */
+        transform: translateX(-100%); /* Mueve el slider hacia la izquierda */
     }
 }
 
+/* Animación para el slider que se mueve a la derecha */
 @keyframes slide-animationAbajo {
     0% {
-      transform: translateX(-100%);  /* Inicia en la posición original */
+        transform: translateX(0);  /* Empieza en la posición inicial */
     }
     100% {
-      transform: translateX(0); /* Mueve el slider hacia la izquierda, todo el ancho de un slide */
+        transform: translateX(100%); /* Mueve el slider hacia la derecha */
     }
 }
 
-  .slider-container:hover .slider {
-    animation-play-state: running; /* Inicia la animación al hacer hover */
-  }
-  
-  .slider-container .slider {
-    animation-play-state: paused; /* Pausa la animación cuando no se hace hover */
-  }
+/* Animación de la parte superior (hacia la izquierda) */
+.sliderImagenesArriba {
+    animation: slide-animationArriba 10s infinite; /* Movimiento hacia la izquierda */
+}
+
+/* Animación de la parte inferior (hacia la derecha) */
+.sliderImagenesAbajo {
+    animation: slide-animationAbajo 10s infinite; /* Movimiento hacia la derecha */
+}
+
+/* Hover para pausar las animaciones */
+.slider-container:hover .sliderImagenesArriba,
+.slider-container:hover .sliderImagenesAbajo {
+    animation-play-state: paused; /* Pausa las animaciones cuando no se hace hover */
+}
+
+.slider-container .sliderImagenesArriba,
+.slider-container .sliderImagenesAbajo {
+    animation-play-state: running; /* Inicia las animaciones cuando se hace hover */
+}
+
 .derecha{
     text-align: center;
     width: 20%;
