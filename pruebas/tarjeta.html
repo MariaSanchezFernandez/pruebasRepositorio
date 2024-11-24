@@ -14,6 +14,7 @@
             align-content: center;
             flex-direction: column;
             position: relative; /* Hace que las tarjetas se ubiquen dentro de esta sección */
+            overflow: hidden;
 
             align-items: center;
         }
@@ -24,6 +25,7 @@
             margin:auto;
             position: relative;
             overflow: hidden;
+            top: 0;
             background-color: blue;
         }
     </style>
@@ -38,6 +40,7 @@
         <div class="card" style="background-color: green;">Tarjeta 3</div>
         <div class="card" style="background-color: blue;">Tarjeta 4</div>
         <div class="card" style="background-color: grey;">Tarjeta 5</div>
+
     </section>
     <section class="section3">
         <p>Adios</p>
@@ -56,22 +59,23 @@
             ScrollTrigger.create({
                 trigger: card,
                 start: "top top", 
-                end: () => `+=${window.innerHeight}`,
+                end: "bottom top",
                 pin: true,
                 pinSpacing: false,
                 markers: true,
-                scrub:3
+                scrub:true,
+                anticipatePin:1
 
             });
         });
+
         ScrollTrigger.create({
             trigger: ".section2",
             start: "top", 
             end: "bottom", 
             scrub: 3,
-            markers: true, 
+            markers: true, // Marcadores de prueba
         });
-
     </script>
 
 </body>
