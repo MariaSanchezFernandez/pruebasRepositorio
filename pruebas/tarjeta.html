@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .section1, .section3{
+            height: 100vh;
+        }
+        .section2{
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            flex-direction: column;
+            position: relative; /* Hace que las tarjetas se ubiquen dentro de esta sección */
+
+            align-items: center;
+        }
+        .card{
+            width: 70vw;
+            height: 100vh;
+            text-align: center;
+            margin:auto;
+            position: relative;
+            overflow: hidden;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <section class="section1">
+        <p>Hola</p>
+    </section>
+    <section class="section2">
+        <div class="card" style="background-color: red;">Tarjeta 1</div>
+        <div class="card" style="background-color: yellow;">Tarjeta 2</div>
+        <div class="card" style="background-color: green;">Tarjeta 3</div>
+        <div class="card" style="background-color: blue;">Tarjeta 4</div>
+        <div class="card" style="background-color: grey;">Tarjeta 5</div>
+    </section>
+    <section class="section3">
+        <p>Adios</p>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
+  
+    <script>
+
+        gsap.registerPlugin(ScrollTrigger);
+
+        let card = gsap.utils.toArray(".card");
+
+        card.forEach((card) => {
+            ScrollTrigger.create({
+                trigger: card,
+                start: "top top", 
+                end: () => `+=${window.innerHeight}`,
+                pin: true,
+                pinSpacing: false,
+                markers: true,
+                scrub:3
+
+            });
+        });
+        ScrollTrigger.create({
+            trigger: ".section2",
+            start: "top", 
+            end: "bottom", 
+            scrub: 3,
+            markers: true, 
+        });
+
+    </script>
+
+</body>
+</html> 
