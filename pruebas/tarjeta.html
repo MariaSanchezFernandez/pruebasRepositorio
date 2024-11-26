@@ -164,6 +164,7 @@
     </script>
 </body>
 </html> -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -171,53 +172,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        /* Sección 1 y 3 mantienen el 100vh */
         .section1, .section3 {
             height: 100vh;
         }
 
-        /* Sección 2 (contenedor de las tarjetas) */
         .section2 {
             display: flex;
             justify-content: center;
             align-content: center;
             flex-direction: column;
-            position: relative; /* Hace que las tarjetas se ubiquen dentro de esta sección */
+            position: relative; 
             overflow: hidden;
             align-items: center;
+            
+        
         }
 
-        /* Estilo base de las tarjetas */
         .card {
-            width: 70vw; /* Ancho dinámico basado en el 70% del ancho de la ventana */
-            height: 100vh; /* Altura completa de la pantalla */
+            width: 70vw; 
+            height:70vh;
             text-align: center;
-            margin: auto;
             position: relative;
             overflow: hidden;
             top: 0;
             background-color: blue;
         }
 
-        /* Media Query para pantallas pequeñas (móviles) */
         @media (max-width: 768px) {
             .card {
-                width: 90vw; /* Hacer que las tarjetas ocupen el 90% del ancho en pantallas pequeñas */
-                height: 80vh; /* Reducir la altura de las tarjetas en pantallas pequeñas */
+                width: 90vw;
+                height: 80vh; 
             }
 
-            /* Ajustes de las secciones en pantallas pequeñas */
             .section1, .section3 {
-                height: 100vh; /* Permitir que las secciones ajusten su tamaño en pantallas pequeñas */
-                padding: 20px; /* Agregar algo de espacio alrededor del contenido */
+                height: 100vh;
+                padding: 20px;
             }
         }
 
-        /* Media Query para pantallas muy pequeñas (móviles en modo vertical) */
         @media (max-width: 480px) {
             .card {
-                width: 95vw; /* Las tarjetas ocupan el 95% del ancho */
-                height: 70vh; /* Ajustar la altura para pantallas muy pequeñas */
+                width: 95vw; 
+                height: 70vh; 
             }
         }
     </style>
@@ -241,24 +237,22 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
     <script>
         gsap.registerPlugin(ScrollTrigger);
-        gsap.registerPlugin(ScrollTrigger);
 
-let cards = gsap.utils.toArray(".card");
+        let cards = gsap.utils.toArray(".card");
 
-cards.forEach((card, i) => {
-  ScrollTrigger.create({
-    trigger: card,
-    start: "top top",
-    end: "top bottom",
-    endTrigger: ".section3",
-    pin: true,
-    pinSpacing: false,
-    markers: true,
-    scrub: true,
-    anticipatePin: 1
-  });
-});
-
+        cards.forEach((card, i) => {
+        ScrollTrigger.create({
+            trigger: card,
+            start: "top-=20%",
+            end: "top bottom",
+            endTrigger: ".section3",
+            pin: true,
+            pinSpacing: false,
+            markers: true,
+            scrub: true,
+            anticipatePin: 1
+            });
+        });
     </script>
 
 </body>
