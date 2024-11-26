@@ -1,3 +1,169 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarjetas con Animación</title>
+    <style>
+        .section1, .section3 {
+            height: 100vh;
+        }
+
+        .section2 {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+            align-items: center;
+        }
+
+        .card {
+            width: 65vw;
+            height: 90vh;
+            text-align: center;
+            margin: 20px;
+            position: relative;
+            overflow: hidden;
+            top: 0;
+            background-color: blue;
+            box-sizing: border-box;
+        }
+
+        .button-container {
+            position: fixed;
+            top: 20%;
+            left: 10px;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .scroll-button {
+            display: none;
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            text-align: center;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .scroll-button.show {
+            display: block;
+            transform: translateX(0);
+        }
+
+        .scroll-button:hover {
+            background-color: #0056b3;
+        }
+
+        @media (max-width: 768px) {
+            .card {
+                width: 90vw;
+                height: 80vh;
+            }
+
+            .section1, .section3 {
+                height: 100vh;
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .card {
+                width: 95vw;
+                height: 70vh;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="section1">
+        <p>Hola</p>
+    </section>
+    <section class="section2">
+        <div class="button-container">
+            <button class="scroll-button" data-target="0">Ir a Tarjeta 1</button>
+            <button class="scroll-button" data-target="1">Ir a Tarjeta 2</button>
+            <button class="scroll-button" data-target="2">Ir a Tarjeta 3</button>
+            <button class="scroll-button" data-target="3">Ir a Tarjeta 4</button>
+            <button class="scroll-button" data-target="4">Ir a Tarjeta 5</button>
+        </div>
+        <div class="card" style="background-color: red;">Tarjeta 1</div>
+        <div class="card" style="background-color: yellow;">Tarjeta 2</div>
+        <div class="card" style="background-color: green;">Tarjeta 3</div>
+        <div class="card" style="background-color: blue;">Tarjeta 4</div>
+        <div class="card" style="background-color: grey;">Tarjeta 5</div>
+    </section>
+    <section class="section3">
+        <p>Adios</p>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollToPlugin.min.js"></script>
+    <script>
+        gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+
+        const cards = gsap.utils.toArray(".card");
+        const buttons = document.querySelectorAll(".scroll-button");
+
+        cards.forEach((card, i) => {
+            ScrollTrigger.create({
+                trigger: card,
+                start: "top top",
+                end: "top bottom",
+                endTrigger: ".section3",
+                pin: true,  // Mantener las tarjetas fijadas
+                scrub: true,  
+                markers: false,
+                anticipatePin: 1
+            });
+        });
+
+        // Mostrar botones conforme las tarjetas son vistas
+        cards.forEach((card, index) => {
+            ScrollTrigger.create({
+                trigger: card,
+                start: "top center",
+                end: "top bottom",
+                onEnter: () => {
+                    buttons[index].classList.add("show");
+                },
+                onLeaveBack: () => {
+                    if (gsap.utils.toArray(".card:visible").length === cards.length) {
+                        buttons[index].classList.add("show");
+                    }
+                },
+                markers: false,
+            });
+        });
+
+        // Función para hacer scroll a la tarjeta seleccionada
+        buttons.forEach((button) => {
+            button.addEventListener("click", () => {
+                const targetIndex = button.getAttribute("data-target");
+                const targetCard = cards[targetIndex];
+
+                gsap.to(window, {
+                    scrollTo: {
+                        y: targetCard,
+                        offsetY: 0,  // Aseguramos que no se desplace hacia abajo de más
+                    },
+                    duration: 1,
+                    ease: "power2.inOut",
+                });
+            });
+        });
+    </script>
+</body>
+</html> -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
