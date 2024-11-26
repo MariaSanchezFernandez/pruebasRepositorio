@@ -83,6 +83,7 @@
                 trigger: card,
                 start: "top top", 
                 end: "bottom top",
+                endTrigger:".section3",
                 pin: true,
                 pinSpacing: false,
                 markers: true,
@@ -91,14 +92,6 @@
             });
         });
 
-        cards.forEach((card, i) => {
-        ScrollTrigger.create({
-            trigger: ".section2",
-            start: "top", 
-            end: "bottom", 
-            scrub: 3,
-            markers: false, // Marcadores de prueba
-        });
     </script>
 
 </body>
