@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gota que cae y se abre</title>
+    <style>
+        /* Estilos globales */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f1f1f1;
+            overflow: hidden;
+        }
+
+        /* Contenedor principal */
+        .container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Bola inicial (gotita) */
+        .bola {
+            width: 100px;
+            height: 100px;
+            background-color: #4CAF50;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            position: relative;
+            transition: all 1s ease-out;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Estilo para la bola expandida en forma de gota */
+        .bola.expandida {
+            width: 150px;
+            height: 200px;
+            border-radius: 50% 50% 0 0; /* Forma de gota */
+            background-color: #3e8e41;
+            position: fixed;
+            top: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Contenido expandido */
+        .contenido {
+            display: none;
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            margin-top: 20px;
+            opacity: 0;
+            transition: opacity 1s ease;
+        }
+
+        /* Mostrar el contenido */
+        .contenido.show {
+            display: block;
+            opacity: 1;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Contenedor principal -->
+    <div class="container">
+        <!-- Bola inicial (gotita) -->
+        <div id="bola" class="bola">
+            <span>Click</span>
+        </div>
+    </div>
+
+    <!-- Contenido expandido -->
+    <div id="contenidoExpandido" class="contenido">
+        <h2>Sobre mí</h2>
+        <p>¡Hola! Soy María Sánchez Fernández, estudiante de Desarrollo de Aplicaciones Multiplataforma.</p>
+        <p>Trabajo con lenguajes como Kotlin, Java, PHP, Swift, HTML, CSS y JavaScript, entre otros.</p>
+        <p>A lo largo del curso, descubrí mi pasión por el Front-End y el diseño web.</p>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const bola = document.getElementById('bola');
+            const contenido = document.getElementById('contenidoExpandido');
+
+            bola.addEventListener('click', function() {
+                // Expande la bola en forma de gota
+                bola.classList.add('expandida');
+                
+                // Muestra el contenido después de un retraso
+                setTimeout(function() {
+                    contenido.classList.add('show');
+                }, 1000); // Esperar 1 segundo antes de mostrar el contenido
+
+                // Hacer scroll hacia el contenido
+                window.scrollTo({
+                    top: contenido.offsetTop, // Posición del contenido
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
