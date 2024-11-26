@@ -75,22 +75,23 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
     <script>
         gsap.registerPlugin(ScrollTrigger);
+        gsap.registerPlugin(ScrollTrigger);
 
-        let card = gsap.utils.toArray(".card");
+let cards = gsap.utils.toArray(".card");
 
-        card.forEach((card) => {
-            ScrollTrigger.create({
-                trigger: card,
-                start: "top top", 
-                end: "bottom top",
-                endTrigger:".section3",
-                pin: true,
-                pinSpacing: false,
-                markers: true,
-                scrub:true,
-                anticipatePin:1
-            });
-        });
+cards.forEach((card, i) => {
+  ScrollTrigger.create({
+    trigger: card,
+    start: "top top",
+    end: "top bottom",
+    endTrigger: ".section3",
+    pin: true,
+    pinSpacing: false,
+    markers: true,
+    scrub: true,
+    anticipatePin: 1
+  });
+});
 
     </script>
 
