@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efecto Hover Animado</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #1a1a1a;
+            color: #fff;
+        }
+
+        .nombreTitulo h1 {
+            font-size: 4rem;
+            font-weight: bold;
+            display: flex;
+            gap: 0.2rem;
+        }
+
+        .nombreTitulo span {
+            position: relative;
+            display: inline-block;
+            color: transparent;
+            background: linear-gradient(90deg, #ff4081, #4081ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            transition: transform 0.3s ease, background-position 0.3s ease;
+        }
+
+        .nombreTitulo span:hover {
+            transform: scale(1.2) rotate(5deg);
+            background-position: 100% 0;
+        }
+
+        .nombreTitulo span::before {
+            content: attr(data-letter);
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            color: rgba(255, 255, 255, 0.1);
+            z-index: -1;
+            transform: scale(2);
+            opacity: 0;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .nombreTitulo span:hover::before {
+            opacity: 1;
+            transform: scale(1.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="nombreTitulo">
+        <h1>
+            <span data-letter="M">M</span>
+            <span data-letter="a">a</span>
+            <span data-letter="r">r</span>
+            <span data-letter="í">í</span>
+            <span data-letter="a">a</span>
+            <span data-letter="S">S</span>
+            <span data-letter="á">á</span>
+            <span data-letter="n">n</span>
+            <span data-letter="c">c</span>
+            <span data-letter="h">h</span>
+            <span data-letter="e">e</span>
+            <span data-letter="z">z</span>
+            <span data-letter="F">F</span>
+            <span data-letter="e">e</span>
+            <span data-letter="r">r</span>
+            <span data-letter="n">n</span>
+            <span data-letter="á">á</span>
+            <span data-letter="n">n</span>
+            <span data-letter="d">d</span>
+            <span data-letter="e">e</span>
+            <span data-letter="z">z</span>
+        </h1>
+    </div>
+</body>
+</html>

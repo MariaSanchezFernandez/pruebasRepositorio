@@ -1,0 +1,439 @@
+
+body, html {
+    padding: 0;
+    margin: 0;
+    font-family: "Inter", sans-serif;
+}
+
+.scroll{
+    overflow: hidden;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+/*Cabecera https://kennethnym.com/blog/progressive-blur-in-css/*/
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    position: fixed;
+    backdrop-filter: blur(10px);
+    left: 0;
+    width: 100%;
+    z-index: 9999; 
+    padding: 10px 0; 
+    text-align: center; 
+}
+
+.cabecera {
+    margin: 10px 40px;
+    font-size: 20px;
+    position: relative;
+    color: black;
+    text-decoration: none; 
+    cursor: pointer; 
+}
+
+header a{
+    transition: color 0.5s ease; 
+}
+.cabecera::after {
+    content: ''; 
+    position: absolute;
+    left: -10%;
+    height: 1.5px;
+    background-color: black;
+    width: 120%;
+    transition: all 0.3s ease-in-out; 
+    top: 50%; 
+    transform: translateY(-50%);
+}
+
+.cabecera:hover::after {
+    top: 100%; 
+    transform: translateY(0);
+}
+
+@media (max-width:800px){
+    header{
+        justify-content: center;
+    }
+    .cabecera {
+        font-size: 17px;
+    }
+}
+
+@media (max-width:500px){
+    header{
+        display: none;
+    }
+    .cabecera {
+        font-size: 17px;
+    }
+
+    .nombreTitulo{
+        width: 60vw;
+        margin-top: -100px;
+    }
+    .bola{
+        bottom: 150px !important;
+    }
+}
+
+
+
+/* INICIO */
+
+.inicio{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+.nombreTitulo>h1{
+    display: flex;
+    flex-direction: column;
+    font-weight: 200;
+}
+.nombreTitulo{
+    font-size: 40px;
+}
+
+.inicio>h2{
+    font-size: 25px;
+    font-weight: 200;
+}
+
+.desarrolloMovil>h2{
+    font-size: 25px;
+    font-weight: 200;
+    margin-top: 3px;
+}
+ 
+.letraStrong{
+    font-weight: 700;
+}
+
+.bola{
+    background-color: #3FCED1;
+    height: 30px;
+    width: 30px;
+    border-radius: 100px;
+    position: absolute;
+    bottom: 70px;
+}
+
+@media (max-width:768px){
+    .nombreTitulo{
+        font-size: 30px;
+    }
+    .inicio>h2{
+        font-size: 20px;
+    }
+    .desarrolloMovil>h2{
+        font-size: 20px;
+    }
+     
+}
+
+/*Sobre mí*/
+
+.sobreMi{
+    height: 100vh;
+    background-color: #3FCED1;
+}
+
+/*Proyectos*/
+
+.proyectos {
+    margin-top: 100px;
+}
+
+.tarjetasProyectosPrincipales{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    position: relative; 
+    overflow: hidden;
+    align-items: center;
+    margin-top: -50px;
+}
+
+.tarjetasProyectosPrincipales h2{
+    margin-bottom: 50px;
+}
+.card {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    top: 0;
+    border-radius: 20px;
+    background-color: blue;
+    margin-bottom: 130px;
+}
+
+.proyectosSecundarios{
+    height: 60vh;
+    display: none;
+}
+
+.botonesProyectos{
+    margin: 50px;
+}
+
+@media (max-width: 1024px) {
+    /*
+    .tarjetasProyectosPrincipales {
+        padding-bottom: 20vh;
+    }
+    */
+}
+
+@media (max-width:768px){
+    .card {
+        width: 80vw;
+        height: 60vh; 
+    }
+    /*
+    .tarjetasProyectosPrincipales {
+        padding-bottom: 25vh;
+    }
+    */
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 70vw; 
+        height: 60vh; 
+    }
+    /*
+    .tarjetasProyectosPrincipales {
+        padding-bottom: 30vh;
+    }
+    */
+}
+
+/*Mapamundi*/
+
+.proyectoMapamundi{
+    background-color: #283856;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+}
+
+.imagenMapamundi img{
+    height: 55vh;
+}
+
+.imagenMapamundi{
+    width: 50%;
+}
+
+.letrasMapamundi{
+    color: white;
+    width: 50%;
+    padding: 50px;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.letrasMapamundi p{
+    font-weight: 300;
+}
+
+.letrasMapamundi h1{
+    font-family: "Jolly Lodger", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 60px;
+    margin: 0;
+}
+
+.letrasMapamundi button{
+    color: black;
+    background-color: white;
+    font-family: "Jolly Lodger", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 25px;
+    padding: 5px 15px 5px 15px;
+    border-radius: 50px;
+}
+
+.botonesAppyPrototipo{
+    height: 40px;
+    align-content: center;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+@media (min-width: 1313px) {
+    .card{
+        width: 55vw !important;
+    }
+    .botonesAppyPrototipo{
+        width: 90%;
+    }
+}
+
+
+@media (max-width: 1313px) {
+    .letrasMapamundi button{
+        font-size: 21px;
+    }
+}
+
+
+@media (max-width: 1137px) {
+    .letrasMapamundi button{
+        font-size: 20px;
+    }
+
+    .card {
+        width: 80vw;
+        height: 55vh; 
+    }
+}
+
+@media (max-width:1001px){
+    .imagenMapamundi img{
+        height: 45vh;
+    }
+    
+}
+
+@media (max-width:868px){
+    .imagenMapamundi img{
+        height: 40vh;
+    }
+
+    
+    .botonesAppyPrototipo{
+        width: 110%;
+    }
+}
+
+@media (max-width: 780px) {
+    .imagenMapamundi img{
+        display: none;
+    }
+    .letrasMapamundi{
+        width: 100%;
+    }
+    .imagenMapamundi{
+        width: 0%;
+    }
+}
+
+
+@media (max-width:425){
+    .imagenMapamundi img{
+        height: 40vh !important;
+    }
+}
+
+.card {
+    width: 70vw; 
+    height: 60vh; 
+}
+
+/*Contacto*/
+
+/* Estilos para el formulario de contacto */
+.contacto {
+    background-color: #3FCED1; /* Fondo del formulario */
+    padding: 50px 20px;
+    text-align: center;
+    color: white;
+}
+
+.contacto h2 {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+/* Estilos para el formulario */
+.formularioContacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.campoFormulario {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.campoFormulario label {
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.campoFormulario input,
+.campoFormulario select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.campoFormulario input:focus,
+.campoFormulario select:focus {
+    outline: none;
+    border-color: #3FCED1; /* Color del borde al hacer foco */
+}
+
+.campoFormulario button {
+    padding: 12px 25px;
+    font-size: 18px;
+    background-color: #3FCED1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.campoFormulario button:hover {
+    background-color: #2fa99f;
+}
+
+@media (max-width: 768px) {
+    .formularioContacto {
+        padding: 20px;
+    }
+
+    .campoFormulario input,
+    .campoFormulario select,
+    .campoFormulario button {
+        font-size: 14px;
+    }
+}
+

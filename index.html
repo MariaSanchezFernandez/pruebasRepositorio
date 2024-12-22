@@ -4,168 +4,170 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollTrigger.min.js"></script>
-    <script src="https://unpkg.com/locomotive-scroll/dist/locomotive-scroll.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.21/vanta.fog.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <!-- FUENTES DE LETRAS -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="estilos.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jolly+Lodger&display=swap" rel="stylesheet">
+    
+
 </head>
-<body>
+<body class="scroll">
     <header>
-        <a href="#curriculum" class="cabecera">Cv</a>
+        <a href="#sobreMi" class="cabecera">Sobre mí</a>
         <a href="#proyectos" class="cabecera">Proyectos</a>
-        <a href="#contacto" class="cabecera">Contacto</a>        
+        <a href="#contacto" class="cabecera">Contacto</a> 
     </header>
-    <div class="container">
-        <section class="section inicio">
-            <div>
-                <h3>María Sánchez Fernández</h3>
-
-            </div>
-            <div>
-                <img src="./img/flecha.png">
-            </div>
-
-        </section>
-
-        <section class="section presentacion">
-            <h1>Aqui va todo el texto sobre mi y la foto</h1>
-        </section>
-
-        <section id="curriculum" class="section cv">
-            <div class="izquierda">
-                <h2>Titulaciones</h2>
-                <div class="infoCvDetalle">
-                    <div class="textoYcalendario">
-                        <p>Bto. Ciencias Sociales  -  IES San Juan de la Cruz</p>
-                        <div class="calendario">
-                            <img src="./img/calendario.png" alt="">
-                            <p>Sept 2021 - Junio 2023</p>
+    <section class="inicio">
+        <div class="nombreTitulo">
+            <h1><span class="letraStrong">María</span>Sánchez Fernández</h1>
+        </div>
+        <h2>Front-end</h2>
+        <span class="desarrolloMovil"><h2>Desarrollo Android/Ios</h2></span>
+        <div class="bola" id="bola"></div>
+    </section>
+    <section class="sobreMi" id="sobreMi">
+        <h1></h1>
+        <h2></h2>
+        <p></p>
+        <h2></h2>
+        <div></div>
+    </section>
+    <section class="proyectos" id="proyectos">
+        <div class="tarjetasProyectosPrincipales">
+            <h2>Proyectos</h2>
+            <div class="card" id="tarjeta1">
+                <div class="proyectoMapamundi">
+                    <div class="imagenMapamundi">
+                        <img src="img/mapamundi.png" alt="">
+                    </div>
+                    <div class="letrasMapamundi">
+                        <h1>Mapamundi</h1>
+                        <p>Mapamundi, una aplicación creada para Android, desarrollada en Android Studio, y programada usando Kotlin. Una pequeña guía sobre las distintas épocas de la historia </p>
+                        <div class="botonesAppyPrototipo">
+                            <button>Ver app</button>
+                            <button>Ver prototipo</button>
                         </div>
                     </div>
-                    <ul>
-                        <li>Habilidades críticas y sociales</li>
-                    </ul>
-                    <div class="textoYcalendario">
-                        <p>Grado Superior en DAM  -  Escuela Estech</p>
-                        <div class="calendario">
-                            <img src="./img/calendario.png" alt="">
-                            <p>Sept 2023 - Junio 2025</p>
-                        </div>
-                    </div>
-                    <ul>
-                        <li>Comprension en competencias en programación, diseño y desarrollo de aplicaciones para diferentes plataformas, optimizando la experiencia del usuario.</li>
-                    </ul>
                 </div>
-                <h2>Experiencia</h2>
-                <div class="infoCvDetalle">
-                    <div class="textoYcalendario">
-                        <p>Ayudante de cocina  -  Playa Hoteles, Roquetas de Mar</p>
-                        <div class="calendario">
-                            <img src="./img/calendario.png" alt="">
-                            <p>Junio 2024 - Sept 2024</p>
-                        </div>
-                    </div>
-                    <ul>
-                        <li>Aprendizaje de habiliades como atención al cliente, resolución de problemas de manera efectiva bajo presión, trabajo en equipo o tareas de responsabilidad.</li>
-                    </ul>
-                </div>
+            </div>
+            <div class="card" id="tarjeta2">Tarjeta 2</div>
+            <div class="card" id="tarjeta3">Tarjeta 3</div>
+            <div class="card" id="tarjeta4">Tarjeta 4</div>
+        </div>
         
-                <h2>Habilidades</h2>
-                <div class="infoCvDetalle">
-                    <p>Idiomas</p>
-                    <ul>
-                        <li>Español - Nativo - Hablado y escrito</li>
-                        <li>Inglés - Intermedio/Alto - B2 First Cambridge - Hablado y escrito</li>
-                    </ul>
-                    <p>Movilidad</p>
-                    <ul>
-                        <li>Movilidad nacional e internacional total</li>
-                    </ul>
-                </div>
-                <h2>Herramientas</h2>
-                <div>
-                    <div class="sliderPrincipal">
-                        <div class="sliderImagenesArriba"> 
-                            <div class="slider">
-                                <img src="./img/Kotlin.png" alt="Kotlin">
-                                <img src="./img/Swift.png" alt="Swift">
-                                <img src="./img/Java.png" alt="Java">
-                                <img src="./img/React.png" alt="React">
-                                <img src="./img/Bootstrap.png" alt="Bootstrap">
-                                <img src="./img/js.png" alt="JavaScript">
-                                <img src="./img/Html5.png" alt="HTML5">
-                                <img src="./img/Css3.png" alt="CSS3">
-                                <img src="./img/Laravel.png" alt="Laravel">
-                                <img src="./img/php.png" alt="PHP">
-                                <img src="./img/Kotlin.png" alt="Kotlin">
-                                <img src="./img/Swift.png" alt="Swift">
-                                <img src="./img/Java.png" alt="Java">
-                                <img src="./img/React.png" alt="React">
-                                <img src="./img/Bootstrap.png" alt="Bootstrap">
-                                <img src="./img/js.png" alt="JavaScript">
-                                <img src="./img/Html5.png" alt="HTML5">
-                                <img src="./img/Css3.png" alt="CSS3">
-                                <img src="./img/Laravel.png" alt="Laravel">
-                                <img src="./img/php.png" alt="PHP">
-                            </div>
-                        </div>
-                        <div class="sliderImagenesAbajo"> 
-                            <div class="slider">
-                                <img src="./img/androids.png" alt="Android">
-                                <img src="./img/sql.png" alt="SQL">
-                                <img src="./img/wordpress.png" alt="WordPress">
-                                <img src="./img/Figma.png" alt="Figma">
-                                <img src="./img/vst.png" alt="Visual Studio">
-                                <img src="./img/idea.png" alt="IDEA">
-                                <img src="./img/xcode.png" alt="Xcode">
-                                <img src="./img/postman.png" alt="Postman">
-                                <img src="./img/Docker.png" alt="Docker">
-                                <img src="./img/git.png" alt="Git">
-                                <img src="./img/androids.png" alt="Android">
-                                <img src="./img/sql.png" alt="SQL">
-                                <img src="./img/wordpress.png" alt="WordPress">
-                                <img src="./img/Figma.png" alt="Figma">
-                                <img src="./img/vst.png" alt="Visual Studio">
-                                <img src="./img/idea.png" alt="IDEA">
-                                <img src="./img/xcode.png" alt="Xcode">
-                                <img src="./img/postman.png" alt="Postman">
-                                <img src="./img/Docker.png" alt="Docker">
-                                <img src="./img/git.png" alt="Git">
-                            </div>
-                        </div>        
-                    </div>
-                </div>                           
+        <div class="botonesProyectos">
+            <a href="#tarjeta1"><button>Proyecto 1</button></a>
+            <a href="#tarjeta2"><button>Proyecto 2</button></a>
+            <a href="#tarjeta3"><button>Proyecto 3</button></a>
+            <a href="#tarjeta4"><button>Proyecto 4</button></a>
+        </div>
+
+        <div class="proyectosSecundarios">
+            <h2>Más proyectos</h2>
+            <div>
+                <a href=""></a>
+                <a href=""></a>
+                <a href=""></a>
+                <a href=""></a>
             </div>
+        </div>
+    </section>
+    <section class="contacto" id="contacto">
+    <h2>Contacto</h2>
+    <form action="" method="POST" class="formularioContacto">
+        <div class="campoFormulario">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+        </div>
+        <div class="campoFormulario">
+            <label for="apellido">Apellido</label>
+            <input type="text" id="apellido" name="apellido" placeholder="Tu apellido" required>
+        </div>
+        <div class="campoFormulario">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Tu email" required>
+        </div>
+        <div class="campoFormulario">
+            <label for="motivo">Motivo</label>
+            <select id="motivo" name="motivo" required>
+                <option value="">Selecciona el motivo</option>
+                <option value="consulta">Consulta</option>
+                <option value="sugerencia">Sugerencia</option>
+                <option value="reclamo">Reclamo</option>
+            </select>
+        </div>
+        <div class="campoFormulario">
+            <button type="submit">Enviar</button>
+        </div>
+    </form>
+</section>
 
-            <div class="derecha">
-                <div class="botonWrapper">
-                    <a href="cv/CV_MaríaSánchezFdez.pdf" download="CV María Sánchez" id="cvLink">
-                    <button class="botonDescargar" id="descargarCv">Descargar cv</button>
-                    </a>
-                </div>
-            </div>
-        </section>
+    <footer></footer>
 
-        <section id="proyectos" class="section proyectos">
-            <h1>Aquí van todos los proyectos</h1>
-        </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
+    
+    <script>
+       
+    //Animación de las tarjetas
+    document.addEventListener('DOMContentLoaded', () => {
 
-        <section id="contacto" class="section formulario">
-            <h1>Formulario de contacto</h1>
-        </section>
+        gsap.registerPlugin(ScrollTrigger);
 
-        <footer class="footer">
-            <h1>Redes sociales y demás</h1>
-        </footer>
+        let cards = gsap.utils.toArray(".card");
 
-    </div>
-    <script src="./confetti.min.js"></script>
-    <script src="./script.js"></script>
+        cards.forEach((card, i) => {
+            ScrollTrigger.create({
+                trigger: card,
+                start: "top-=20%",
+                end: "top bottom",
+                endTrigger: ".botonesProyectos",
+                pin: true,
+                pinSpacing: false,
+                markers: false,
+                scrub: 2,
+                anticipatePin: 1
+            });
+        }); 
+    });
+
+    //Bola para dar comienzo con el scroll 
+
+    let bolaComienzo = document.getElementById('bola');
+
+    bolaComienzo.addEventListener('click', () => {
+        document.body.classList.remove('scroll');
+        document.querySelector('#sobreMi').scrollIntoView({
+            behavior: 'smooth'
+        })
+    })
+
+    //Cambiar el color del header dependiendo de en que sección está
+
+/*    const headerLinks = document.querySelectorAll('.cabecera');
+
+    ScrollTrigger.create({
+        trigger: '#sobreMi',
+        start: 'top center',
+        end: 'bottom center',
+        onEnter: () => {
+            headerLinks.forEach((link) => {
+                link.style.color = 'white'; // Cambia el color de las letras a blanco
+                link.style.borderColor = 'white'; // Cambia el color de la línea a blanco
+            });
+        },
+        onLeaveBack: () => {
+            headerLinks.forEach((link) => {
+                link.style.color = 'black'; // Cambia el color de las letras a negro
+                link.style.borderColor = 'black'; // Cambia el color de la línea a negro
+            });
+        },
+    });
+*/
+    </script>
+
 </body>
 </html>

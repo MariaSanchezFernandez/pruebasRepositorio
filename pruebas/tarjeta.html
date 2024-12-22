@@ -226,6 +226,13 @@
         <p>Hola</p>
     </section>
     <section class="section2">
+        <div class="botonesContendor">
+            <buttom class="scroll"></buttom>
+            <buttom class="scroll"></buttom>
+            <buttom class="scroll"></buttom>
+            <buttom class="scroll"></buttom>
+            <buttom class="scroll"></buttom>
+        </div>
         <div class="card" style="background-color: red;">Tarjeta 1</div>
         <div class="card" style="background-color: yellow;">Tarjeta 2</div>
         <div class="card" style="background-color: green;">Tarjeta 3</div>
@@ -239,6 +246,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
     <script>
+        
         gsap.registerPlugin(ScrollTrigger);
 
         let cards = gsap.utils.toArray(".card");
@@ -256,6 +264,8 @@
             anticipatePin: 1
             });
         });
+
+        
     </script>
 
 </body>

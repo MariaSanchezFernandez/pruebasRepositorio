@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/locomotive-scroll/dist/locomotive-scroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.21/vanta.fog.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header>
+        <a href="#curriculum" class="cabecera">Cv</a>
+        <a href="#proyectos" class="cabecera">Proyectos</a>
+        <a href="#contacto" class="cabecera">Contacto</a>        
+    </header>
+    <div class="container">
+        <section class="section inicio">
+            <div>
+                <h3>María Sánchez Fernández</h3>
+
+            </div>
+            <div>
+                <img src="./img/flecha.png">
+            </div>
+
+        </section>
+
+        <section class="section presentacion">
+            <h1>Aqui va todo el texto sobre mi y la foto</h1>
+        </section>
+
+        <section id="curriculum" class="section cv">
+            <div class="izquierda">
+                <h2>Titulaciones</h2>
+                <div class="infoCvDetalle">
+                    <div class="textoYcalendario">
+                        <p>Bto. Ciencias Sociales  -  IES San Juan de la Cruz</p>
+                        <div class="calendario">
+                            <img src="./img/calendario.png" alt="">
+                            <p>Sept 2021 - Junio 2023</p>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>Habilidades críticas y sociales</li>
+                    </ul>
+                    <div class="textoYcalendario">
+                        <p>Grado Superior en DAM  -  Escuela Estech</p>
+                        <div class="calendario">
+                            <img src="./img/calendario.png" alt="">
+                            <p>Sept 2023 - Junio 2025</p>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>Comprension en competencias en programación, diseño y desarrollo de aplicaciones para diferentes plataformas, optimizando la experiencia del usuario.</li>
+                    </ul>
+                </div>
+                <h2>Experiencia</h2>
+                <div class="infoCvDetalle">
+                    <div class="textoYcalendario">
+                        <p>Ayudante de cocina  -  Playa Hoteles, Roquetas de Mar</p>
+                        <div class="calendario">
+                            <img src="./img/calendario.png" alt="">
+                            <p>Junio 2024 - Sept 2024</p>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>Aprendizaje de habiliades como atención al cliente, resolución de problemas de manera efectiva bajo presión, trabajo en equipo o tareas de responsabilidad.</li>
+                    </ul>
+                </div>
+        
+                <h2>Habilidades</h2>
+                <div class="infoCvDetalle">
+                    <p>Idiomas</p>
+                    <ul>
+                        <li>Español - Nativo - Hablado y escrito</li>
+                        <li>Inglés - Intermedio/Alto - B2 First Cambridge - Hablado y escrito</li>
+                    </ul>
+                    <p>Movilidad</p>
+                    <ul>
+                        <li>Movilidad nacional e internacional total</li>
+                    </ul>
+                </div>
+                <h2>Herramientas</h2>
+                <div>
+                    <div class="sliderPrincipal">
+                        <div class="sliderImagenesArriba"> 
+                            <div class="slider">
+                                <img src="./img/Kotlin.png" alt="Kotlin">
+                                <img src="./img/Swift.png" alt="Swift">
+                                <img src="./img/Java.png" alt="Java">
+                                <img src="./img/React.png" alt="React">
+                                <img src="./img/Bootstrap.png" alt="Bootstrap">
+                                <img src="./img/js.png" alt="JavaScript">
+                                <img src="./img/Html5.png" alt="HTML5">
+                                <img src="./img/Css3.png" alt="CSS3">
+                                <img src="./img/Laravel.png" alt="Laravel">
+                                <img src="./img/php.png" alt="PHP">
+                                <img src="./img/Kotlin.png" alt="Kotlin">
+                                <img src="./img/Swift.png" alt="Swift">
+                                <img src="./img/Java.png" alt="Java">
+                                <img src="./img/React.png" alt="React">
+                                <img src="./img/Bootstrap.png" alt="Bootstrap">
+                                <img src="./img/js.png" alt="JavaScript">
+                                <img src="./img/Html5.png" alt="HTML5">
+                                <img src="./img/Css3.png" alt="CSS3">
+                                <img src="./img/Laravel.png" alt="Laravel">
+                                <img src="./img/php.png" alt="PHP">
+                            </div>
+                        </div>
+                        <div class="sliderImagenesAbajo"> 
+                            <div class="slider">
+                                <img src="./img/androids.png" alt="Android">
+                                <img src="./img/sql.png" alt="SQL">
+                                <img src="./img/wordpress.png" alt="WordPress">
+                                <img src="./img/Figma.png" alt="Figma">
+                                <img src="./img/vst.png" alt="Visual Studio">
+                                <img src="./img/idea.png" alt="IDEA">
+                                <img src="./img/xcode.png" alt="Xcode">
+                                <img src="./img/postman.png" alt="Postman">
+                                <img src="./img/Docker.png" alt="Docker">
+                                <img src="./img/git.png" alt="Git">
+                                <img src="./img/androids.png" alt="Android">
+                                <img src="./img/sql.png" alt="SQL">
+                                <img src="./img/wordpress.png" alt="WordPress">
+                                <img src="./img/Figma.png" alt="Figma">
+                                <img src="./img/vst.png" alt="Visual Studio">
+                                <img src="./img/idea.png" alt="IDEA">
+                                <img src="./img/xcode.png" alt="Xcode">
+                                <img src="./img/postman.png" alt="Postman">
+                                <img src="./img/Docker.png" alt="Docker">
+                                <img src="./img/git.png" alt="Git">
+                            </div>
+                        </div>        
+                    </div>
+                </div>                           
+            </div>
+
+            <div class="derecha">
+                <div class="botonWrapper">
+                    <a href="cv/CV_MaríaSánchezFdez.pdf" download="CV María Sánchez" id="cvLink">
+                    <button class="botonDescargar" id="descargarCv">Descargar cv</button>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="proyectos" class="section proyectos">
+            <h1>Aquí van todos los proyectos</h1>
+        </section>
+
+        <section id="contacto" class="section formulario">
+            <h1>Formulario de contacto</h1>
+        </section>
+
+        <footer class="footer">
+            <h1>Redes sociales y demás</h1>
+        </footer>
+
+    </div>
+    <script src="./confetti.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>

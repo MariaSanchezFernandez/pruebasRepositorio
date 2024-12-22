@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarjetas Superpuestas con GSAP</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200vh; /* Altura aumentada para permitir el desplazamiento */
+        }
+        .container {
+            position: relative;
+            width: 300px;
+            height: 400px;
+            perspective: 1000px; /* Añade perspectiva para el efecto 3D */
+        }
+        .card {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transform: translateY(100px) scale(0.8); /* Posición inicial fuera de vista */
+            transition: transform 0.3s ease;
+        }
+        .card img {
+            width: 80%;
+            height: auto;
+            border-radius: 4px;
+        }
+        .card h2 {
+            margin: 16px 0 8px;
+            font-size: 1.5em;
+        }
+        .card p {
+            margin: 0 16px;
+            color: #555;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card" id="card1">
+            <h2>Título 1</h2>
+            <img src="https://via.placeholder.com/240x160" alt="Imagen 1">
+            <p>Descripción de la tarjeta 1.</p>
+        </div>
+        <div class="card" id="card2">
+            <h2>Título 2</h2>
+            <img src="https://via.placeholder.com/240x160" alt="Imagen 2">
+            <p>Descripción de la tarjeta 2.</p>
+        </div>
+        <div class="card" id="card3">
+            <h2>Título 3</h2>
+            <img src="https://via.placeholder.com/240x160" alt="Imagen 3">
+            <p>Descripción de la tarjeta 3.</p>
+        </div>
+        <!-- Añade más tarjetas según sea necesario -->
+    </div>
+
+    <!-- Incluye las librerías de GSAP y ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    <script>
+        // Asegúrate de que GSAP y ScrollTrigger estén registrados
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Selecciona todas las tarjetas
+        const cards = document.querySelectorAll('.card');
+
+        // Aplica la animación a cada tarjeta
+        cards.forEach((card, index) => {
+            gsap.to(card, {
+                scrollTrigger: {
+                    trigger: card,
+                    start: 'top 80%',
+                    end: 'top 30%',
+                    scrub: 1,
+                    markers: false
+                },
+                opacity: 1,
+                translateY: 0,
+                scale: 1,
+                duration: 1,
+                ease: 'power2.out',
+                delay: index * 0.2 // Retrasa cada tarjeta para un efecto escalonado
+            });
+        });
+    </script>
+</body>
+</html>
