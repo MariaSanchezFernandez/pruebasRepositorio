@@ -3,6 +3,10 @@ body, html {
     padding: 0;
     margin: 0;
     font-family: "Inter", sans-serif;
+    background-image: url(img/fondo.png);
+    background-repeat: repeat;
+    background-size:9%;
+    background-attachment: fixed;
 }
 
 .scroll{
@@ -23,17 +27,18 @@ header {
     left: 0;
     width: 100%;
     z-index: 9999; 
-    padding: 10px 0; 
+    padding: 20px 0; 
     text-align: center; 
 }
 
 .cabecera {
-    margin: 10px 40px;
+    margin: 10px 55px;
     font-size: 20px;
     position: relative;
     color: black;
     text-decoration: none; 
     cursor: pointer; 
+    font-weight: 400;
 }
 
 header a{
@@ -43,7 +48,7 @@ header a{
     content: ''; 
     position: absolute;
     left: -10%;
-    height: 1.5px;
+    height: 1.3px;
     background-color: black;
     width: 120%;
     transition: all 0.3s ease-in-out; 
@@ -65,7 +70,7 @@ header a{
     }
 }
 
-@media (max-width:500px){
+@media (max-width:500px) and (min-width:0px){
     header{
         display: none;
     }
@@ -121,8 +126,8 @@ header a{
 
 .bola{
     background-color: #3FCED1;
-    height: 30px;
-    width: 30px;
+    height: 35px;
+    width: 35px;
     border-radius: 100px;
     position: absolute;
     bottom: 70px;
@@ -146,8 +151,145 @@ header a{
 .sobreMi{
     height: 100vh;
     background-color: #3FCED1;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    flex-direction: column;
 }
 
+.sobreMi h1{
+    font-weight: 600;
+}
+
+.sobreMi h2{
+    font-weight: 400;
+    text-align: center;
+    padding: 0px 100px;
+    text-align: center;
+}
+
+.sobreMi p{
+    font-weight: 200;
+    padding: 0px 100px;
+    text-align: center;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.6em 1.3rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color:white;
+    background: transparent;
+    text-decoration: none;
+    border: 2px solid white; 
+    border-radius: 50px; 
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+@media (hover: hover) {
+    .button.button--stroke:hover {
+        color: #3FCED1;
+        text-decoration: none;
+    }
+}
+
+.button--stroke:after {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.button--stroke:after {
+    border: 0.125rem solid var(--color-surface-white);
+    border-radius: 6.25rem;
+    content: "";
+    pointer-events: none;
+}
+
+.button__label {
+    position: relative;
+    text-align: center;
+    transition: color 50ms var(--ease-in-out-quart);
+}
+
+.button--stroke:hover .button__label {
+    transition: color 0.15s var(--ease-in-out-quart);
+}
+
+.button__flair {
+    bottom: 0;
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.button--stroke .button__flair {
+    transform: scale(0);
+    transform-origin: 0 0;
+    will-change: transform;
+}
+
+.button__flair:before {
+    aspect-ratio: 1/1;
+    background-color:white;
+    border-radius: 50%;
+    content: "";
+    display: block;
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    transform: translate(-50%, -50%);
+    width: 170%;
+}
+  
+.botonMovil{
+    display: none;
+}
+@media (max-width:768px){
+    .sobreMi h2{
+        padding: 0px 50px;
+    }
+
+    .sobreMi p{
+        padding: 0px 50px;
+    }   
+    
+    
+    .botonMovil{
+        display: block;
+        font-family: 'Inter';
+        font-weight: 400;
+        font-size: 16px;
+        background-color: #283856;
+        color: white;
+        height: 40px;
+        border-radius: 50px;
+        width: 150px;
+        border: 0px;
+    }
+    .button{
+        display: none;
+    }
+}
+
+@media (max-width:550px){
+    .sobreMi p{
+        display: none;
+    }   
+}
 /*Proyectos*/
 
 .proyectos {
@@ -282,6 +424,45 @@ header a{
     justify-content: space-around;
 }
 
+/*Plans Landing*/
+
+.proyectoPlansLanding{
+    background-color: black;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    width: 100%;
+    align-items: center;
+    align-content: center;
+}
+
+.imagenPlansLanding{
+    width: 50%;
+    height: 100%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-image: url(img/fondoLanding.png);
+    background-size: cover;
+    backface-visibility: visible;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.imagenPlansLanding img{
+    width: 100%;
+}
+.letrasPlansLanding img{
+    height: 10vh;
+}
+
+.letrasPlansLanding{
+    width: 50%;
+}
+
+
+/*Responsive de las tarjetas*/
+
 @media (min-width: 1313px) {
     .card{
         width: 55vw !important;
@@ -322,7 +503,6 @@ header a{
         height: 40vh;
     }
 
-    
     .botonesAppyPrototipo{
         width: 110%;
     }
@@ -338,6 +518,12 @@ header a{
     .imagenMapamundi{
         width: 0%;
     }
+    .imagenPlansLanding img{
+        display: none;
+    }
+    .letrasPlansLanding{
+        width: 100%;
+    }
 }
 
 
@@ -346,6 +532,7 @@ header a{
         height: 40vh !important;
     }
 }
+
 
 .card {
     width: 70vw; 

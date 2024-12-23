@@ -29,11 +29,22 @@
         <div class="bola" id="bola"></div>
     </section>
     <section class="sobreMi" id="sobreMi">
-        <h1></h1>
-        <h2></h2>
-        <p></p>
-        <h2></h2>
-        <div></div>
+        <h1>¡Hola!</h1>
+        <h2>Soy María Sánchez Fernández, especializada en desarrollo de aplicaciones web y móviles</h2>
+        <p>
+            
+        </p>
+    
+        <h1>Habilidades técnicas</h1>
+        <div>
+            
+        </div>
+        <a download="cv/CV_MaríaSánchezFernández" class="button button--stroke" data-block="button">
+            <span class="button__flair"></span>
+            <span class="button__label">Descargar CV</span>
+        </a>
+        <button class="botonMovil">Descargar CV</button>
+
     </section>
     <section class="proyectos" id="proyectos">
         <div class="tarjetasProyectosPrincipales">
@@ -53,7 +64,21 @@
                     </div>
                 </div>
             </div>
-            <div class="card" id="tarjeta2">Tarjeta 2</div>
+            <div class="card" id="tarjeta2">
+                <div class="proyectoPlansLanding">
+                    <div class="imagenPlansLanding">
+                        <p></p>
+                    </div>
+                    <div class="letrasPlansLanding">
+                        <img src="img/logoPlans.png">
+                        <p>Landing web realizado con Html y Css de manera responsive que trata sobre una página de suscribción para ver películas y series</p>
+                        <div class="botonesAppyPrototipo">
+                            <button>Ver app</button>
+                            <button>Ver prototipo</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="card" id="tarjeta3">Tarjeta 3</div>
             <div class="card" id="tarjeta4">Tarjeta 4</div>
         </div>
@@ -167,6 +192,93 @@
         },
     });
 */
+
+        //Botón hover
+
+    class Button {
+    constructor(buttonElement) {
+        this.block = buttonElement;
+        this.init();
+        this.initEvents();
+    }
+
+    init() {
+        const el = gsap.utils.selector(this.block);
+
+        this.DOM = {
+        button: this.block,
+        flair: el(".button__flair")
+        };
+
+        this.xSet = gsap.quickSetter(this.DOM.flair, "xPercent");
+        this.ySet = gsap.quickSetter(this.DOM.flair, "yPercent");
+    }
+
+    getXY(e) {
+        const { left, top, width, height } = this.DOM.button.getBoundingClientRect();
+
+        const xTransformer = gsap.utils.pipe(
+        gsap.utils.mapRange(0, width, 0, 100),
+        gsap.utils.clamp(0, 100)
+        );
+
+        const yTransformer = gsap.utils.pipe(
+        gsap.utils.mapRange(0, height, 0, 100),
+        gsap.utils.clamp(0, 100)
+        );
+
+        return {
+        x: xTransformer(e.clientX - left),
+        y: yTransformer(e.clientY - top)
+        };
+    }
+
+    initEvents() {
+        this.DOM.button.addEventListener("mouseenter", (e) => {
+        const { x, y } = this.getXY(e);
+
+        this.xSet(x);
+        this.ySet(y);
+
+        gsap.to(this.DOM.flair, {
+            scale: 1,
+            duration: 0.4,
+            ease: "power2.out"
+        });
+        });
+
+        this.DOM.button.addEventListener("mouseleave", (e) => {
+        const { x, y } = this.getXY(e);
+
+        gsap.killTweensOf(this.DOM.flair);
+
+        gsap.to(this.DOM.flair, {
+            xPercent: x > 90 ? x + 20 : x < 10 ? x - 20 : x,
+            yPercent: y > 90 ? y + 20 : y < 10 ? y - 20 : y,
+            scale: 0,
+            duration: 0.3,
+            ease: "power2.out"
+        });
+        });
+
+        this.DOM.button.addEventListener("mousemove", (e) => {
+        const { x, y } = this.getXY(e);
+
+        gsap.to(this.DOM.flair, {
+            xPercent: x,
+            yPercent: y,
+            duration: 0.4,
+            ease: "power2"
+        });
+        });
+    }
+    }
+
+    const buttonElements = document.querySelectorAll('[data-block="button"]');
+
+    buttonElements.forEach((buttonElement) => {
+    new Button(buttonElement);
+    });
     </script>
 
 </body>
