@@ -3,10 +3,11 @@ body, html {
     padding: 0;
     margin: 0;
     font-family: "Inter", sans-serif;
-    background-image: url(img/fondo.png);
+    background-image: url(../img/fondo.png);
     background-repeat: repeat;
     background-size:9%;
     background-attachment: fixed;
+    
 }
 
 .scroll{
@@ -125,7 +126,7 @@ header a{
 }
 
 .bola{
-    background-color: #3FCED1;
+    background-color: #001F3F;
     height: 35px;
     width: 35px;
     border-radius: 100px;
@@ -150,7 +151,7 @@ header a{
 
 .sobreMi{
     height: 100vh;
-    background-color: #3FCED1;
+    background-color: #001F3F;
     color: white;
     display: flex;
     justify-content: center;
@@ -196,7 +197,7 @@ header a{
 
 @media (hover: hover) {
     .button.button--stroke:hover {
-        color: #3FCED1;
+        color: #001F3F;
         text-decoration: none;
     }
 }
@@ -394,7 +395,7 @@ header a{
 }
 
 .letrasMapamundi p{
-    font-weight: 300;
+    font-weight: 200;
 }
 
 .letrasMapamundi h1{
@@ -453,12 +454,36 @@ header a{
     width: 100%;
 }
 .letrasPlansLanding img{
-    height: 10vh;
+    height: 8vh;
 }
 
 .letrasPlansLanding{
+    color: white;
     width: 50%;
+    padding: 50px;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
 }
+
+.letrasPlansLanding p{
+    font-weight: 200;
+}
+
+
+.letrasPlansLanding button{
+    color: black;
+    background-color: white;
+    font-family: 'Inter', serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 20px;
+    padding: 5px 15px 5px 15px;
+    border-radius: 50px;
+}
+
 
 
 /*Responsive de las tarjetas*/
@@ -504,7 +529,7 @@ header a{
     }
 
     .botonesAppyPrototipo{
-        width: 110%;
+        width: 100%;
     }
 }
 
@@ -520,6 +545,9 @@ header a{
     }
     .imagenPlansLanding img{
         display: none;
+    }
+    .imagenPlansLanding{
+        width: 0%;
     }
     .letrasPlansLanding{
         width: 100%;
@@ -543,7 +571,7 @@ header a{
 
 /* Estilos para el formulario de contacto */
 .contacto {
-    background-color: #3FCED1; /* Fondo del formulario */
+    background-color: #001F3F; /* Fondo del formulario */
     padding: 50px 20px;
     text-align: center;
     color: white;
@@ -594,13 +622,13 @@ header a{
 .campoFormulario input:focus,
 .campoFormulario select:focus {
     outline: none;
-    border-color: #3FCED1; /* Color del borde al hacer foco */
+    border-color: #001F3F; /* Color del borde al hacer foco */
 }
 
 .campoFormulario button {
     padding: 12px 25px;
     font-size: 18px;
-    background-color: #3FCED1;
+    background-color: #001F3F;
     color: white;
     border: none;
     border-radius: 5px;
@@ -609,7 +637,10 @@ header a{
 }
 
 .campoFormulario button:hover {
-    background-color: #2fa99f;
+    background-color: white;
+    color: #001F3F;
+    border-color: #001F3F;
+    border: 1px solid;
 }
 
 @media (max-width: 768px) {
