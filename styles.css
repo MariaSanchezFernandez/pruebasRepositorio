@@ -176,6 +176,7 @@ header a{
 
 .sobreMi p{
     font-weight: 200;
+    font-size: 18px;
     padding: 0px 100px;
     text-align: center;
 }
@@ -724,9 +725,9 @@ footer {
     padding: 0px;
     margin: 0px;
     display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center;    /* Centra verticalmente */
-    flex-direction: column; /* Asegura que los elementos estén en columna */
+    justify-content: center; 
+    align-items: center;
+    flex-direction: column;
     color: white;
     text-align: center;
     width: 100%;
@@ -735,23 +736,24 @@ footer {
 
 .footerLinea {
     display: flex;
-    justify-content: space-between; /* Espaciado entre los elementos */
-    align-items: center;            /* Centra verticalmente */
-    width: 80%;                     /* Ajusta el ancho del contenido */
-    max-width: 1200px;              /* Limita el ancho máximo */
+    justify-content: space-between; 
+    align-items: center;        
+    width: 90%;                   
+    max-width: 1200px;    
+    border-top: white 1px solid;        
 }
 
 .izquierda, .derecha {
     display: flex;
     flex-direction: row;
-    align-items: center; /* Centra verticalmente el contenido */
+    align-items: center; 
     text-align: center;
 }
 
 .derecha div {
     display: flex;
-    flex-direction: column; /* Asegura que los elementos dentro estén en columna */
-    align-items: center;    /* Centra horizontalmente */
-    margin: 0 10px;         /* Espaciado entre las columnas */
+    flex-direction: column; 
+    align-items: center;   
+    margin: 0 10px;        
 }
 

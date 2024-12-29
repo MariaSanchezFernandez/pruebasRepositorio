@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .si{
+            background-color: white;
+            height: 100vh;
+        }
+
+        .no{
+            height: 100vh;
+            background-color: black;
+        }
+
+        header{
+            position: fixed;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>HOLA</h1>
+    </header>
+    <section class="si">
+    </section>
+    <section class="no">
+    </section>
+    <section class="si">
+    </section>
+
+    <script>
+        // Selecciona la sección con la clase .no
+        const seccionNo = document.querySelector('.no');
+        const header = document.querySelector('header');
+
+        // Configura el Intersection Observer
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                // Si la sección .no está en la vista
+                if (entry.isIntersecting) {
+                    // Añade la clase 'white' al header para cambiar el color del h1 a blanco
+                    header.classList.add('white');
+                } else {
+                    // Elimina la clase 'white' cuando la sección ya no está en la vista
+                    header.classList.remove('white');
+                }
+            });
+        }, {
+            threshold: 0.5 // 50% de la sección debe estar visible para que se active
+        });
+
+        // Observa la sección .no
+        observer.observe(seccionNo);
+    </script>
+</body>
+</html>
