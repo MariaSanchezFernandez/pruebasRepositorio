@@ -42,9 +42,9 @@
         <a download="cv/CV_MaríaSánchezFernández" class="button button--stroke" data-block="button">
             <span class="button__flair"></span>
             <span class="button__label">Descargar CV</span>
-        </a>
+        </a>        
         <button class="botonMovil"><a download="CV_MaríaSánchezFernández.pdf" href="cv/CV_MaríaSánchezFernández.pdf">Descargar CV</a>
-            </button>
+        </button>
 
     </section>
     <section class="proyectos" id="proyectos">
@@ -57,7 +57,7 @@
                     </div>
                     <div class="letrasMapamundi">
                         <h1>Mapamundi</h1>
-                        <p>Mapamundi, una aplicación creada para Android, desarrollada en Android Studio, y programada usando Kotlin. Una pequeña guía sobre las distintas épocas de la historia </p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, impedit quas. Consequuntur quas deleniti facilis cum vitae sed reprehenderit distinctio laboriosam illum omnis! Sunt, reprehenderit assumenda eum tenetur velit quidem.</p>
                         <div class="botonesAppyPrototipo">
                             <button>Ver app</button>
                             <button>Ver prototipo</button>
@@ -67,12 +67,11 @@
             </div>
             <div class="card" id="tarjeta2">
                 <div class="proyectoPlansLanding">
-                    <div class="imagenPlansLanding">
-                        <p></p>
-                    </div>
+                    <div class="blur-background"></div>
+                    
                     <div class="letrasPlansLanding">
-                        <img src="../img/logoPlans.png">
-                        <p>Landing web realizado con Html y Css de manera responsive que trata sobre una página de suscribción para ver películas y series</p>
+                        <img src="../img/logoPlans.png" alt="Logo Plans">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio architecto nesciunt temporibus voluptate, eos tenetur, totam nisi sit excepturi accusamus suscipit provident iste rem quia! Dolores aspernatur amet dolore earum.</p>
                         <div class="botonesAppyPrototipo">
                             <button>Ver app</button>
                             <button>Ver prototipo</button>
@@ -80,29 +79,37 @@
                     </div>
                 </div>
             </div>
-            <div class="card" id="tarjeta3">Tarjeta 3</div>
-            <div class="card" id="tarjeta4">Tarjeta 4</div>
-        </div>
-        
-        <div class="botonesProyectos">
-            <a href="#tarjeta1"><button>Proyecto 1</button></a>
-            <a href="#tarjeta2"><button>Proyecto 2</button></a>
-            <a href="#tarjeta3"><button>Proyecto 3</button></a>
-            <a href="#tarjeta4"><button>Proyecto 4</button></a>
+            <div class="card" id="tarjeta3">
+                <div class="proyectoMovieList">
+                    <div class="imagenMovieList">
+                        <img src="./img/movieList.png" alt="">
+                    </div>
+                    <div class="letrasMovieList">
+                        <h1>MovieList</h1>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis, eaque, sint tenetur dolore sapiente voluptatum maxime odit eius iure qui nihil ipsam? Exercitationem laudantium adipisci qui in dolores cum quia!</p>
+                        <div class="botonesAppyPrototipo">
+                            <button>Ver app</button>
+                            <button>Ver prototipo</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="proyectosSecundarios">
             <h2>Más proyectos</h2>
             <div>
-                <a href=""></a>
-                <a href=""></a>
-                <a href=""></a>
-                <a href=""></a>
+                <a href="#">
+                    <img src="./img/fondo.png" alt="">
+                </a>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#"></a>
             </div>
         </div>
     </section>
     <section class="contacto" id="contacto">
-    <h2>Contacto</h2>
+    <h2>¿Hablamos y así me cuentas tus ideas?</h2>
     <form action="" method="POST" class="formularioContacto">
         <div class="campoFormulario">
             <label for="nombre">Nombre</label>
@@ -131,7 +138,24 @@
     </form>
 </section>
 
-    <footer></footer>
+    <footer>
+        <div class="footerLinea">
+            <div class="izquierda">
+                <h2>MSF</h2>
+            </div>
+            <div class="derecha">
+                <div>
+                    <img src="" alt="">
+                    <p>Teléfono</p>
+                </div>
+                <div>
+                    <img src="" alt="">
+                    <p>Gmail</p>
+                </div>
+            </div>
+    
+        </div>
+    </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
@@ -150,7 +174,7 @@
                 trigger: card,
                 start: "top-=20%",
                 end: "top bottom",
-                endTrigger: ".botonesProyectos",
+                endTrigger: ".proyectosSecundarios",
                 pin: true,
                 pinSpacing: false,
                 markers: false,
@@ -171,30 +195,8 @@
         })
     })
 
-    //Cambiar el color del header dependiendo de en que sección está
 
-/*    const headerLinks = document.querySelectorAll('.cabecera');
-
-    ScrollTrigger.create({
-        trigger: '#sobreMi',
-        start: 'top center',
-        end: 'bottom center',
-        onEnter: () => {
-            headerLinks.forEach((link) => {
-                link.style.color = 'white'; // Cambia el color de las letras a blanco
-                link.style.borderColor = 'white'; // Cambia el color de la línea a blanco
-            });
-        },
-        onLeaveBack: () => {
-            headerLinks.forEach((link) => {
-                link.style.color = 'black'; // Cambia el color de las letras a negro
-                link.style.borderColor = 'black'; // Cambia el color de la línea a negro
-            });
-        },
-    });
-*/
-
-        //Botón hover
+    //Botón hover
 
     class Button {
     constructor(buttonElement) {
