@@ -32,28 +32,29 @@
     </section>
 
     <script>
-        // Selecciona la sección con la clase .no
-        const seccionNo = document.querySelector('.no');
-        const header = document.querySelector('header');
+document.addEventListener('DOMContentLoaded', () => {
+    const seccionNo = document.querySelector('.no');
+    const header = document.querySelector('header');
 
-        // Configura el Intersection Observer
+    if (seccionNo && header) {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                // Si la sección .no está en la vista
                 if (entry.isIntersecting) {
-                    // Añade la clase 'white' al header para cambiar el color del h1 a blanco
                     header.classList.add('white');
                 } else {
-                    // Elimina la clase 'white' cuando la sección ya no está en la vista
                     header.classList.remove('white');
                 }
             });
         }, {
-            threshold: 0.5 // 50% de la sección debe estar visible para que se active
+            threshold: 0.5
         });
 
-        // Observa la sección .no
         observer.observe(seccionNo);
+    } else {
+        console.error('No se encontraron los elementos .no o header.');
+    }
+});
+
     </script>
 </body>
 </html>

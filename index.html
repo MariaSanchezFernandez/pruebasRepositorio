@@ -15,7 +15,7 @@
 
 </head>
 <body class="scroll">
-    <header>
+    <header id="header">
         <a href="#sobreMi" class="cabecera">Sobre mí</a>
         <a href="#proyectos" class="cabecera">Proyectos</a>
         <a href="#contacto" class="cabecera">Contacto</a> 
@@ -24,8 +24,19 @@
         <div class="nombreTitulo">
             <h1><span class="letraStrong">María</span>Sánchez Fernández</h1>
         </div>
-        <h2>Front-end</h2>
-        <span class="desarrolloMovil"><h2>Desarrollo Android/Ios</h2></span>
+        <div class="wrapped">
+            <h2>Desarrollo</h2>
+            <div class="palabras">
+                <span>IOS</span>
+                <span>Android</span>
+                <span>Web</span>
+                <span>Ios</span>
+
+                
+    
+            </div>
+        </div>
+        
         <div class="bola" id="bola"></div>
     </section>
     <section class="sobreMi" id="sobreMi">
@@ -36,20 +47,52 @@
         </p>
     
         <h1>Habilidades técnicas</h1>
-        <div>
-            
+        <div class="habilidadesTecnicas">
+            <div class="fotosHabiliadesTecnicas">
+                <div >
+                    <img src="" alt="">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                </div>
+                <div>
+                    <img src="" alt="">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                </div>
+            </div>
+            <div class="letrasHabilidadesTecnicas">
+                <div>
+                    <h2>Lenguajes de programación</h2>
+                </div>
+                <div>
+                    <h2>Software</h2>
+                </div>
+            </div>
         </div>
+        
         <a download="cv/CV_MaríaSánchezFernández" class="button button--stroke" data-block="button">
             <span class="button__flair"></span>
             <span class="button__label">Descargar CV</span>
-        </a>        
-        <button class="botonMovil"><a download="CV_MaríaSánchezFernández.pdf" href="cv/CV_MaríaSánchezFernández.pdf">Descargar CV</a>
-        </button>
+        </a>
+         <a download="CV_MaríaSánchezFernández.pdf" href="cv/CV_MaríaSánchezFernández.pdf"><button class="botonMovil">Descargar CV</button></a>       
+        
 
     </section>
     <section class="proyectos" id="proyectos">
         <div class="tarjetasProyectosPrincipales">
-            <h2>Proyectos</h2>
+            <br><br><br><br>
+
+
             <div class="card" id="tarjeta1">
                 <div class="proyectoMapamundi">
                     <div class="imagenMapamundi">
@@ -57,10 +100,11 @@
                     </div>
                     <div class="letrasMapamundi">
                         <h1>Mapamundi</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, impedit quas. Consequuntur quas deleniti facilis cum vitae sed reprehenderit distinctio laboriosam illum omnis! Sunt, reprehenderit assumenda eum tenetur velit quidem.</p>
+                        <p>Aplicación Android creada usando Android Studio y Kotlin con su correspondiente navegación. Trata sobre las diferentes épocas de la historia con un breve resumen de cada una acompañada de imágenes.</p>
                         <div class="botonesAppyPrototipo">
-                            <button>Ver app</button>
-                            <button>Ver prototipo</button>
+                            <a href="https://github.com/MariaSanchezFernandez/Proyecto2Trimestre"><button>Ver app</button></a>
+                            <a href="https://www.figma.com/design/OzWuhJlYiDLkKRYxLMk4HT/Untitled?node-id=0-1&t=TZE0zoFLsZF2ZaPq-1"><button>Ver prototipo</button></a>
+                            
                         </div>
                     </div>
                 </div>
@@ -109,36 +153,35 @@
         </div>
     </section>
     <section class="contacto" id="contacto">
-    <h2>¿Hablamos y así me cuentas tus ideas?</h2>
-    <form action="" method="POST" class="formularioContacto">
-        <div class="campoFormulario">
-            <label for="nombre">Nombre</label>
-            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
-        </div>
-        <div class="campoFormulario">
-            <label for="apellido">Apellido</label>
-            <input type="text" id="apellido" name="apellido" placeholder="Tu apellido" required>
-        </div>
-        <div class="campoFormulario">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="Tu email" required>
-        </div>
-        <div class="campoFormulario">
-            <label for="motivo">Motivo</label>
-            <select id="motivo" name="motivo" required>
-                <option value="">Selecciona el motivo</option>
-                <option value="consulta">Consulta</option>
-                <option value="sugerencia">Sugerencia</option>
-                <option value="reclamo">Reclamo</option>
-            </select>
-        </div>
-        <div class="campoFormulario">
-            <button type="submit">Enviar</button>
-        </div>
-    </form>
-</section>
+        <h2>¿Hablamos y así me cuentas tus ideas?</h2>
+        <div class="blurContacto">
+            <form action="https://formspree.io/f/xjkkpyap" method="POST" class="formularioContacto">
+                <div class="campoFormulario">
+                
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                </div>
+                <div class="campoFormulario">
+                    
+                    <input type="text" id="apellido" name="apellido" placeholder="Tu apellido" required>
+                </div>
+                <div class="campoFormulario">
+                    
+                    <input type="email" id="email" name="email" placeholder="Tu email" required>
+                </div>
+                <div class="campoFormulario">
+                    
+                    <input type="text" id="asunto" name="asunto" placeholder="Asunto" required>
+                </div>
+                <div class="campoFormulario">
+                    <button type="submit">Enviar</button>
 
-    <footer>
+                </div>
+            </form>
+        </div>
+    
+    </section>
+
+    <footer id="footer">
         <div class="footerLinea">
             <div class="izquierda">
                 <h2>MSF</h2>
@@ -187,17 +230,19 @@
     //Bola para dar comienzo con el scroll 
 
     let bolaComienzo = document.getElementById('bola');
+    let header = document.getElementById('header');
+
+    header.style.visibility = "hidden";
 
     bolaComienzo.addEventListener('click', () => {
         document.body.classList.remove('scroll');
         document.querySelector('#sobreMi').scrollIntoView({
             behavior: 'smooth'
         })
+        header.style.visibility = "visible"
     })
 
     //Cambiar color de la cabecera al pasar por sobreMi Y Contacto
-
-    const cabeceras = document.querySelectorAll('.cabecera');
 
 
     //Botón hover
@@ -286,7 +331,15 @@
     buttonElements.forEach((buttonElement) => {
     new Button(buttonElement);
     });
+
+    //Footer 
+
+    
     </script>
+
+
+
 
 </body>
 </html>
+

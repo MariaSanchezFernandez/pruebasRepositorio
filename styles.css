@@ -8,7 +8,6 @@ body, html {
     background-size:9%;
     background-attachment: fixed;
     scroll-behavior: smooth;
-
 }
 
 
@@ -89,6 +88,12 @@ header a{
     .bola{
         bottom: 150px !important;
     }
+    
+    body, html {
+        background-size:15%;
+               
+        
+    }
 }
 
 
@@ -113,23 +118,73 @@ header a{
     font-size: 40px;
 }
 
-.inicio>h2{
-    font-size: 25px;
-    font-weight: 200;
+
+.wrapped {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    height: 50px; /* Altura consistente para todo el contenedor */
+    align-items: center; /* Centra verticalmente "Desarrollo" y las palabras */
+    gap: 10px; /* Espaciado entre "Desarrollo" y las palabras */
 }
 
-.desarrolloMovil>h2{
-    font-size: 25px;
-    font-weight: 200;
-    margin-top: 3px;
+.palabras {
+    overflow: hidden;
+    height: 50px; /* Altura fija para que las palabras encajen */
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    position: relative; /* Para asegurar un correcto alineamiento */
 }
+
+.palabras span {
+    display: block;
+    height: 50px; /* Coincide con la altura del contenedor */
+    line-height: 50px; /* Centra verticalmente el texto dentro de cada palabra */
+    padding-left: 10px;
+    font-size: 1rem; /* Tamaño de fuente ajustable */
+    animation: spin_words 12s infinite ease-in-out; /* Más lenta */
+    border: 1px solid orange; /* Mantengo el borde para visualización */
+    text-align: left; /* Alinea las palabras al inicio */
+}
+
+/* Animación ajustada */
+@keyframes spin_words {
+    0% {
+        transform: translateY(0%);
+    }
+    20% {
+        transform: translateY(0%);
+    }
+    25% {
+        transform: translateY(-100%);
+    }
+    45% {
+        transform: translateY(-100%);
+    }
+    50% {
+        transform: translateY(-200%);
+    }
+    70% {
+        transform: translateY(-200%);
+    }
+    75% {
+        transform: translateY(-300%);
+    }
+    95% {
+        transform: translateY(-300%);
+    }
+    100% {
+        transform: translateY(-400%);
+    }
+}
+
  
 .letraStrong{
     font-weight: 700;
 }
 
 .bola{
-    background-color: #001F3F;
+    background-color: #004225;
     height: 35px;
     width: 35px;
     border-radius: 100px;
@@ -153,8 +208,8 @@ header a{
 /*Sobre mí*/
 
 .sobreMi{
-    height: 100vh;
-    background-color: #001F3F;
+    height: 90vh;
+    background-color: #004225;
     color: white;
     display: flex;
     justify-content: center;
@@ -165,6 +220,7 @@ header a{
 
 .sobreMi h1{
     font-weight: 600;
+    margin-bottom: 10px !important;
 }
 
 .sobreMi h2{
@@ -182,6 +238,7 @@ header a{
 }
 
 .button {
+    cursor: pointer;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -263,7 +320,33 @@ header a{
 .botonMovil{
     display: none;
 }
+.habilidadesTecnicas{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 50px;
+}
 
+.fotosHabiliadesTecnicas{
+}
+.fotosHabiliadesTecnicas img{
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    align-content: left;
+    margin-top: 60px;
+
+}
+
+.letrasHabilidadesTecnicas h2{
+    text-align: left;
+    margin-top: 60px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    
+}
 @media (max-width:768px){
     .sobreMi h2{
         padding: 0px 50px;
@@ -275,27 +358,39 @@ header a{
     
     
     .botonMovil{
+        cursor: pointer;
         display: block;
-        font-family: 'Inter';
-        font-weight: 400;
-        font-size: 16px;
-        background-color: white;
-        color: #001F3F !important;
-        text-decoration: none !important;
-        height: 40px;
-        border-radius: 50px;
         width: 150px;
-        border: 0px;
+        height: 45px;
+        font-family: 'Inter';
+        border-radius: 50px;
+        background-color: #001F3F;
+        font-size: 18px;
+        border: white 1px solid;
+        color: white;
+        transition: 0.3s;
     }
+
+    .botonMovil button:hover{
+        transition: 0.3s;
+        font-weight: 500;
+        background-color: #fff;
+        color: #001F3F;
+    
+    }
+
     .button{
         display: none;
     }
 }
 
 @media (max-width:550px){
-    .sobreMi p{
-        display: none;
-    }   
+    .sobreMi{
+        width: 100vw;
+        padding: 40px;
+    }  
+
+    
 }
 /*Proyectos*/
 
@@ -340,6 +435,10 @@ header a{
 
 .botonesProyectos{
     margin: 50px;
+}
+
+.botonesAppyPrototipo{
+    flex-wrap: wrap;
 }
 
 @media (max-width: 1024px) {
@@ -418,13 +517,16 @@ header a{
 }
 
 .letrasMapamundi button{
+    cursor: pointer;
     color: black;
     background-color: white;
     font-family: "Jolly Lodger", serif;
     font-weight: 400;
+    width: 160px;
+    height: 40px;
     font-style: normal;
-    font-size: 25px;
-    padding: 5px 15px 5px 15px;
+    font-size: 30px;
+
     border-radius: 50px;
 }
 
@@ -497,6 +599,8 @@ header a{
 
 
 .letrasPlansLanding button{
+    cursor: pointer;
+   
     color: black;
     background-color: white;
     font-family: 'Inter', serif;
@@ -505,7 +609,12 @@ header a{
     font-size: 18px !important;
     padding: 5px 15px 5px 15px;
     border-radius: 50px;
+    position: relative;
+    width: 170px;
+    height: 40px;
+    transition: all 0.5s;
 }
+
 
 /*MovieList*/
 .proyectoMovieList{
@@ -537,6 +646,7 @@ header a{
 }
 
 .letrasMovieList button{
+    cursor: pointer;
     color: black;
     background-color: white;
     font-family: 'Inter', serif;
@@ -545,6 +655,9 @@ header a{
     font-size: 18px !important;
     padding: 5px 15px 5px 15px;
     border-radius: 50px;
+    width: 170px;
+    height: 40px;
+    transition: all 0.5s;
 }
 /*Responsive de las tarjetas*/
 
@@ -618,6 +731,12 @@ header a{
     .letrasMovieList{
         width: 100%;
     }
+    .card p{
+        padding-bottom: 30px;
+    }
+    .botonesAppyPrototipo button{
+        margin: 10px;
+    }
 }
 
 
@@ -625,6 +744,8 @@ header a{
     .imagenMapamundi img{
         height: 40vh !important;
     }
+    
+
 }
 
 
@@ -635,91 +756,106 @@ header a{
 
 /*Contacto*/
 
-/* Estilos para el formulario de contacto */
 .contacto {
-    background-color: #001F3F; /* Fondo del formulario */
-    padding: 50px 20px;
-    text-align: center;
+    background-color: #001F3F;
     color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px ;
 }
 
 .contacto h2 {
-    font-size: 30px;
-    font-weight: 700;
-    margin-bottom: 30px;
+    font-size: 2rem;
+    text-align: center;
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-/* Estilos para el formulario */
-.formularioContacto {
+.blurContacto {
+    background-color: #001F3F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    backdrop-filter: blur(15px); /* Desenfoque */
+    border-radius: 20px;
+    padding: 40px;
+    width: 80vw;
+    max-width: 800px;
+}
+
+form {
+    max-width: 800px;
+    width: 80vw;
+    color: #ffffff;
     display: flex;
     flex-direction: column;
+    align-content: center;
     align-items: center;
-    max-width: 600px;
-    margin: 0 auto;
-    background-color: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    gap: 20px;
 }
 
 .campoFormulario {
-    width: 100%;
-    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 
-.campoFormulario label {
-    display: block;
-    font-size: 16px;
-    font-weight: 500;
-    margin-bottom: 5px;
-    color: #333;
-}
-
-.campoFormulario input,
-.campoFormulario select {
-    width: 100%;
+.campoFormulario input {
+    max-width: 800px;
+    width: 80vw;
     padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-}
-
-.campoFormulario input:focus,
-.campoFormulario select:focus {
-    outline: none;
-    border-color: #001F3F; /* Color del borde al hacer foco */
-}
-
-.campoFormulario button {
-    padding: 12px 25px;
     font-size: 18px;
     background-color: #001F3F;
+    border: white 1px solid;
+    border-radius: 20px;
+    outline: none;
+    height: 30px;
     color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    padding-left: 20px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.campoFormulario button:hover {
-    background-color: white;
+.campoFormulario input::placeholder {
+    color:white;
+    font-weight: 200;
+    font-family: 'Inter';
+  }
+
+.campoFormulario input:focus {
+    border-color: #00ff2a;
+    box-shadow: 0 0 8px rgba(36, 143, 59, 0.8);
+}
+
+.campoFormulario input:-webkit-autofill { background-color: #001F3F; }
+
+.campoFormulario button{
+    margin-top: 40px;
+    width: 150px;
+    height: 45px;
+    font-family: 'Inter';
+    border-radius: 50px;
+    background-color: #001F3F;
+    font-size: 18px;
+    border: white 1px solid;
+    color: white;
+    transition: 0.3s;
+
+}
+
+.campoFormulario button:hover{
+   transition: 0.3s;
+   font-weight: 500;
+    background-color: #fff;
     color: #001F3F;
-    border-color: #001F3F;
-    border: 1px solid;
-}
 
-@media (max-width: 768px) {
-    .formularioContacto {
-        padding: 20px;
-    }
-
-    .campoFormulario input,
-    .campoFormulario select,
-    .campoFormulario button {
-        font-size: 14px;
-    }
 }
+/*Footer*/
+
 footer {
     background-color: #001F3F;
     padding: 0px;
