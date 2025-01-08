@@ -3,7 +3,7 @@ body, html {
     padding: 0;
     margin: 0;
     font-family: "Inter", sans-serif;
-    background-image: url(/img/fondo.png);
+    background-image: url(/img/fondoo.png);
     background-repeat: repeat;
     background-size:9%;
     background-attachment: fixed;
@@ -30,18 +30,22 @@ header {
     left: 0;
     width: 100%;
     z-index: 9999; 
-    padding: 20px 0; 
+    padding: 30px 0; 
+    height: 50px;
+    transition: background-color 0.3s ease; /* Animación suave */
+    
+    
     text-align: center; 
 }
 
 .cabecera {
-    margin: 10px 55px;
-    font-size: 20px;
+    margin: 10px 70px;
+    font-size: 25px;
     position: relative;
-    color: black;
+    color: #0F172A;
     text-decoration: none; 
     cursor: pointer; 
-    font-weight: 400;
+    font-weight: 500;
 }
 
 header a{
@@ -51,8 +55,8 @@ header a{
     content: ''; 
     position: absolute;
     left: -10%;
-    height: 1.3px;
-    background-color: black;
+    height: 2px;
+    background-color: #0F172A;
     width: 120%;
     transition: all 0.3s ease-in-out; 
     top: 50%; 
@@ -62,6 +66,14 @@ header a{
 .cabecera:hover::after {
     top: 100%; 
     transform: translateY(0);
+}
+
+.cabecera-verde {
+    color: #0ACF83 !important; /* Cambia el color de las letras a verde */
+}
+
+.cabecera-verde::after {
+    background-color: #0ACF83 !important; /* Cambia la línea decorativa a verde */
 }
 
 @media (max-width:800px){
@@ -106,6 +118,7 @@ header a{
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    color: #0F172A;
     height: 100vh;
     position: relative;
 }
@@ -115,76 +128,73 @@ header a{
     font-weight: 200;
 }
 .nombreTitulo{
-    font-size: 40px;
+    font-size: 45px;
 }
 
 
 .wrapped {
     font-family: 'Inter', sans-serif;
     display: flex;
-    height: 50px; /* Altura consistente para todo el contenedor */
-    align-items: center; /* Centra verticalmente "Desarrollo" y las palabras */
-    gap: 10px; /* Espaciado entre "Desarrollo" y las palabras */
+    height: 50px; 
+    align-items: center;
+    font-weight: 200;
+    gap: 10px; 
+}
+
+.wrapped h2{
+    font-weight: 400;
+    font-size: 30px;
 }
 
 .palabras {
     overflow: hidden;
-    height: 50px; /* Altura fija para que las palabras encajen */
+    height: 50px;
     display: flex;
     flex-direction: column;
     justify-content: start;
-    position: relative; /* Para asegurar un correcto alineamiento */
+    position: relative; 
 }
 
 .palabras span {
     display: block;
-    height: 50px; /* Coincide con la altura del contenedor */
-    line-height: 50px; /* Centra verticalmente el texto dentro de cada palabra */
+    height: 50px; 
+    line-height: 50px;
+    font-weight: 400;
     padding-left: 10px;
-    font-size: 1rem; /* Tamaño de fuente ajustable */
-    animation: spin_words 12s infinite ease-in-out; /* Más lenta */
-    border: 1px solid orange; /* Mantengo el borde para visualización */
-    text-align: left; /* Alinea las palabras al inicio */
+    font-size: 30px;
+    animation: spin_words 12s  infinite; 
+    text-align: left; 
 }
 
-/* Animación ajustada */
+
 @keyframes spin_words {
     0% {
         transform: translateY(0%);
     }
     20% {
-        transform: translateY(0%);
-    }
-    25% {
         transform: translateY(-100%);
     }
-    45% {
-        transform: translateY(-100%);
-    }
-    50% {
+    40% {
         transform: translateY(-200%);
     }
-    70% {
-        transform: translateY(-200%);
-    }
-    75% {
+    60% {
         transform: translateY(-300%);
     }
-    95% {
-        transform: translateY(-300%);
-    }
-    100% {
+    80% {
         transform: translateY(-400%);
     }
+    100% {
+        transform: translateY(-500%);
+    }
+
 }
 
- 
 .letraStrong{
     font-weight: 700;
 }
 
 .bola{
-    background-color: #004225;
+    background-color: #0F172A;
     height: 35px;
     width: 35px;
     border-radius: 100px;
@@ -208,8 +218,8 @@ header a{
 /*Sobre mí*/
 
 .sobreMi{
-    height: 90vh;
-    background-color: #004225;
+    height: 100vh;
+    background-color: #0F172A;
     color: white;
     display: flex;
     justify-content: center;
@@ -233,6 +243,7 @@ header a{
 .sobreMi p{
     font-weight: 200;
     font-size: 18px;
+    width: 70%;
     padding: 0px 100px;
     text-align: center;
 }
@@ -326,14 +337,12 @@ header a{
     margin-bottom: 50px;
 }
 
-.fotosHabiliadesTecnicas{
-}
 .fotosHabiliadesTecnicas img{
     width: 50px;
     height: 50px;
-    background-color: white;
     align-content: left;
     margin-top: 60px;
+    padding-left: 20px;
 
 }
 
@@ -343,10 +352,14 @@ header a{
     height: 50px;
     justify-content: center;
     align-items: center;
-    align-content: center;
+    text-decoration: underline;
+    text-decoration-color: #0ACF83;
+    text-underline-offset: 5px;
 
-    
+    align-content: center;    
 }
+
+
 @media (max-width:768px){
     .sobreMi h2{
         padding: 0px 50px;
@@ -364,7 +377,7 @@ header a{
         height: 45px;
         font-family: 'Inter';
         border-radius: 50px;
-        background-color: #001F3F;
+        background-color: #0F172A;
         font-size: 18px;
         border: white 1px solid;
         color: white;
@@ -375,21 +388,36 @@ header a{
         transition: 0.3s;
         font-weight: 500;
         background-color: #fff;
-        color: #001F3F;
+        color: #0F172A;
     
     }
 
     .button{
         display: none;
     }
+
+    
+    .habilidadesTecnicas{
+        display: none;
+    }
+
+    .tituloMalSituado{
+        display: none;
+    }
+    
+    .botonMovil{
+        margin-top: 40px;
+    }
+    
 }
 
 @media (max-width:550px){
-    .sobreMi{
-        width: 100vw;
-        padding: 40px;
-    }  
 
+    .sobreMi p{
+
+        width: 90%;
+
+    }
     
 }
 /*Proyectos*/
@@ -502,6 +530,7 @@ header a{
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    margin-top: -40px;
 }
 
 .letrasMapamundi p{
@@ -569,8 +598,17 @@ header a{
 .letrasPlansLanding {
     position: relative;
     z-index: 1;
+    margin-top: -40px;
+
     text-align: center;
     padding: 20px;
+    color: white;
+    padding: 60px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    height: 40vh;
 }
 
 
@@ -582,16 +620,6 @@ header a{
     height: 8vh;
 }
 
-.letrasPlansLanding{
-    color: white;
-    width: 100%;
-    padding: 50px;
-    height: 60%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-}
 
 .letrasPlansLanding p{
     font-weight: 200;
@@ -623,6 +651,8 @@ header a{
     display: flex;
     flex-direction: row;
     justify-content: center;
+    margin-top: -40px;
+
     width: 100%;
     align-items: center;
 }
@@ -757,7 +787,7 @@ header a{
 /*Contacto*/
 
 .contacto {
-    background-color: #001F3F;
+    background-color: #0F172A;
     color: white;
     display: flex;
     justify-content: center;
@@ -776,7 +806,7 @@ header a{
 }
 
 .blurContacto {
-    background-color: #001F3F;
+    background-color: #0F172A;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -810,7 +840,7 @@ form {
     width: 80vw;
     padding: 10px;
     font-size: 18px;
-    background-color: #001F3F;
+    background-color: #0F172A;
     border: white 1px solid;
     border-radius: 20px;
     outline: none;
@@ -827,11 +857,11 @@ form {
   }
 
 .campoFormulario input:focus {
-    border-color: #00ff2a;
+    border-color: #0ACF83;
     box-shadow: 0 0 8px rgba(36, 143, 59, 0.8);
 }
 
-.campoFormulario input:-webkit-autofill { background-color: #001F3F; }
+.campoFormulario input:-webkit-autofill { background-color: #0F172A; }
 
 .campoFormulario button{
     margin-top: 40px;
@@ -839,7 +869,7 @@ form {
     height: 45px;
     font-family: 'Inter';
     border-radius: 50px;
-    background-color: #001F3F;
+    background-color: #0F172A;
     font-size: 18px;
     border: white 1px solid;
     color: white;
@@ -851,45 +881,106 @@ form {
    transition: 0.3s;
    font-weight: 500;
     background-color: #fff;
-    color: #001F3F;
+    color: #0F172A;
 
 }
 /*Footer*/
-
 footer {
-    background-color: #001F3F;
-    padding: 0px;
-    margin: 0px;
+    background: linear-gradient(135deg, #0F172A, #1E293B);
+    padding: 40px 0;
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
     flex-direction: column;
     color: white;
     text-align: center;
     width: 100%;
-    height: 20%;
+    position: relative;
+    overflow: hidden;
 }
 
-.footerLinea {
+footer .footerContent {
+    max-width: 1200px;
+    width: 90%;
     display: flex;
-    justify-content: space-between; 
-    align-items: center;        
-    width: 90%;                   
-    max-width: 1200px;    
-    border-top: white 1px solid;        
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-.izquierda, .derecha {
-    display: flex;
+footer .footerContent .brand {
+    font-size: 25px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    display:flex ;
+    align-items: center;
+
     flex-direction: row;
-    align-items: center; 
-    text-align: center;
 }
 
-.derecha div {
+.brand h2{
+    
+    text-decoration: underline;
+    text-decoration-color: #0ACF83;
+    text-underline-offset: 5px;
+}
+.brand p{
+    padding-left: 60px;
+    font-size: 18px;
+    font-weight: 200;
+}
+footer .footerContent .socials {
     display: flex;
-    flex-direction: column; 
-    align-items: center;   
-    margin: 0 10px;        
+    gap: 15px;
 }
 
+footer .footerContent .socials img {
+    height: 35px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    margin-right: 30px;
+}
+
+footer .footerContent .socials img:hover {
+    transform: scale(1.2);
+}
+
+
+@media (max-width: 768px) {
+    footer .footerContent {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    footer .footerContent .socials img {
+        height: 35px;
+    }
+}
+
+
+
+/*Scroll hacia arriba*/
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 60px; 
+    right: 60px; 
+    width: 50px;
+    height: 50px;
+    background-color: #243356;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+    display: none; /* Oculto por defecto */
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    transition: opacity 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+}
+
+.scroll-to-top:hover {
+    background-color: #0ACF83;
+}
