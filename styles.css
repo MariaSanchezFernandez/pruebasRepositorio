@@ -24,7 +24,7 @@ body, html {
 header {
     display: flex;
     flex-direction: row;
-    justify-content: end;
+    justify-content: center;
     position: fixed;
     backdrop-filter: blur(10px);
     left: 0;
@@ -39,7 +39,7 @@ header {
 }
 
 .cabecera {
-    margin: 10px 70px;
+    margin: 10px 120px;
     font-size: 25px;
     position: relative;
     color: #0F172A;
@@ -81,7 +81,7 @@ header a{
         justify-content: center;
     }
     .cabecera {
-        font-size: 17px;
+        font-size: 22px;
     }
 }
 
@@ -90,7 +90,7 @@ header a{
         display: none;
     }
     .cabecera {
-        font-size: 17px;
+        font-size: 22px;
     }
 
     .nombreTitulo{
@@ -195,8 +195,8 @@ header a{
 
 .bola{
     background-color: #0F172A;
-    height: 35px;
-    width: 35px;
+    height: 40px;
+    width: 40px;
     border-radius: 100px;
     position: absolute;
     bottom: 70px;
@@ -229,7 +229,7 @@ header a{
 }
 
 .sobreMi h1{
-    font-weight: 600;
+    font-size: 25px;
     margin-bottom: 10px !important;
 }
 
@@ -244,8 +244,9 @@ header a{
     font-weight: 200;
     font-size: 18px;
     width: 70%;
-    padding: 0px 100px;
+    padding: 0px 0px;
     text-align: center;
+    word-spacing: 3px;
 }
 
 .button {
@@ -366,7 +367,7 @@ header a{
     }
 
     .sobreMi p{
-        padding: 0px 50px;
+        padding: 0px 00px;
     }   
     
     
@@ -416,7 +417,7 @@ header a{
 @media (max-width:550px){
 
     .sobreMi h2{
-
+        width: 110%;
         padding: 0px;
 
     }
@@ -427,7 +428,7 @@ header a{
     }
 
     .sobreMi{
-        padding: 30px;
+        padding: sss0px;
     }
     
 }
@@ -480,6 +481,10 @@ header a{
     flex-wrap: wrap;
 }
 
+.botonesAppyPrototipo button{
+    margin-bottom: 20px;
+}
+
 @media (max-width: 1024px) {
     /*
     .tarjetasProyectosPrincipales {
@@ -524,13 +529,23 @@ header a{
     align-items: center;
 }
 
-.imagenMapamundi img{
-    height: 55vh;
+.imagenMapamundi {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    height: 100%; /* Ocupa todo el alto del contenedor */
+    overflow: hidden; /* Oculta lo que sobresale */
+    position: relative; /* Posicionamiento relativo para controlar la imagen dentro */
 }
 
-.imagenMapamundi{
-    width: 50%;
+.imagenMapamundi img {
+    position: absolute; /* Posicionamiento absoluto dentro del contenedor */
+    top: 50%; /* Centrado verticalmente */
+    right: 0; /* Pegado al lado derecho */
+    transform: translateY(-50%); /* Ajuste para centrar verticalmente */
+    width: auto; /* La anchura se ajusta automáticamente */
+    height: 120%; /* Más alto que el contenedor para asegurarse de que se rellena */
+    object-fit: cover; /* Se recorta adecuadamente */
 }
+
 
 .letrasMapamundi{
     color: white;
@@ -542,6 +557,7 @@ header a{
     justify-content: space-evenly;
     align-items: center;
     margin-top: -40px;
+    margin-right: 40px;
 }
 
 .letrasMapamundi p{
@@ -565,7 +581,7 @@ header a{
     width: 160px;
     height: 40px;
     font-style: normal;
-    font-size: 30px;
+    font-size: 25px;
 
     border-radius: 50px;
 }
@@ -610,7 +626,6 @@ header a{
     z-index: 1;
     margin-top: -40px;
     text-align: center;
-    padding: 20px;
     color: white;
     display: flex;
     justify-content: space-evenly;
@@ -709,12 +724,16 @@ header a{
     .botonesAppyPrototipo{
         width: 90%;
     }
+
+    .imagenMapamundi img{
+        height: 45vh;
+    }
 }
 
 
 @media (max-width: 1313px) {
     .letrasMapamundi button{
-        font-size: 21px;
+        font-size: 16px;
     }
 }
 
@@ -728,17 +747,23 @@ header a{
         width: 80vw;
         height: 55vh; 
     }
+
+    
 }
 
 @media (max-width:1001px){
     .imagenMapamundi img{
-        height: 45vh;
+        height: 40vh;
     }
     
 }
 
 @media (max-width:868px){
     .imagenMapamundi img{
+        height: 30vh;
+    }
+
+    .imagenMovieList img{
         height: 40vh;
     }
 
@@ -767,8 +792,11 @@ header a{
         width: 100%;
     }
     .letrasPlansLanding p{
-        width: 100%;
+        width: 80%;
     
+    }
+    .letrasPlansLanding img{
+        width: 80%;
     }
     .imagenMovieList{
         display: none;
@@ -797,6 +825,7 @@ header a{
     .letrasMapamundi{
         margin-top: 0px;
         height:100%;
+        margin-right: 0px;
     }
     .card p{
         padding-bottom: 0px;
@@ -821,7 +850,7 @@ header a{
     flex-direction: column;
     align-items: center;
     padding: 50px ;
-    height: 60vh;
+    height: 70vh;
 }
 
 .contacto h2 {
@@ -861,9 +890,10 @@ form {
     display: flex;
     flex-direction: column;
     gap: 5px;
+    
 }
 
-.campoFormulario input {
+.campoFormulario input{
     max-width: 800px;
     width: 80vw;
     padding: 10px;
@@ -875,6 +905,7 @@ form {
     height: 30px;
     color: white;
     padding-left: 20px;
+    font-weight: 300;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -891,6 +922,51 @@ form {
 
 .campoFormulario input:-webkit-autofill { background-color: #0F172A; }
 
+.campoFormulario input#asunto {
+    height: 150px; /* Altura específica para simular el textarea */
+    text-align: left; /* Alineación para texto largo */
+    overflow-y: auto; /* Permitir el desplazamiento si el contenido es demasiado largo */
+    display: block; /* Asegúrate de que sea un bloque */
+}
+
+.campoFormulario textarea{
+    max-width: 800px;
+    width: 80vw;
+    font-weight: 300;
+
+    height: 200px;
+    padding: 10px;
+    font-size: 18px;
+    background-color: #0F172A;
+    border: white 1px solid;
+    border-radius: 20px;
+    outline: none;
+    color: white;
+    padding-left: 20px;
+    font-family: 'Inter';
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.campoFormulario textarea::placeholder {
+    color:white;
+    font-weight: 200;
+    font-family: 'Inter';
+  }
+
+.campoFormulario textarea:focus {
+    border-color: #0ACF83;
+    box-shadow: 0 0 8px rgba(36, 143, 59, 0.8);
+}
+
+.campoFormulario textarea:-webkit-autofill { background-color: #0F172A; }
+
+.campoFormulario textarea#asunto {
+    height: 150px; /* Altura específica para simular el textarea */
+    text-align: left; /* Alineación para texto largo */
+    overflow-y: auto; /* Permitir el desplazamiento si el contenido es demasiado largo */
+    display: block; /* Asegúrate de que sea un bloque */
+}
+
 .campoFormulario button{
     margin-top: 40px;
     width: 150px;
@@ -906,11 +982,41 @@ form {
 }
 
 .campoFormulario button:hover{
-   transition: 0.3s;
-   font-weight: 500;
+    transition: 0.3s;
+    font-weight: 500;
     background-color: #fff;
     color: #0F172A;
 
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px #0F172A inset;
+}
+
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover, 
+textarea:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px #0F172A inset;
+}
+
+input:-webkit-autofill {
+    -webkit-text-fill-color: #fff;
+    font-family: 'Inter';
+}
+
+textarea:-webkit-autofill {
+    -webkit-text-fill-color: #fff;
+    font-family: 'Inter';
+}
+
+input.filled {
+    border-color: #0ACF83;
+}
+
+textarea.filled{
+    border-color: #0ACF83;
 }
 /*Footer*/
 footer {
@@ -994,7 +1100,7 @@ footer .footerContent .socials img:hover {
 .scroll-to-top {
     position: fixed;
     bottom: 60px; 
-    left: 60px; 
+    right: 60px; 
     width: 50px;
     height: 50px;
     background-color: #243356;

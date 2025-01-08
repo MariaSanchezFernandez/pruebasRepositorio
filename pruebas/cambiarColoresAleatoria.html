@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cambio de Colores Aleatorio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      color: white;
+      padding: 20px;
+      transition: color 0.5s; /* Transición suave para el cambio de color */
+    }
+
+    .caja {
+      width: 100px;
+      height: 100px;
+      display: inline-block;
+      margin: 10px;
+      transition: background-color 0.5s; /* Transición suave */
+    }
+  </style>
+</head>
+<body>
+  <h1 id="titulo">¡Colores Aleatorios!</h1>
+  <div class="caja"></div>
+  <div class="caja"></div>
+  <div class="caja"></div>
+  <div class="caja"></div>
+  <div class="caja"></div>
+
+  <script>
+    // Función para generar un color hexadecimal aleatorio
+    function generarColorAleatorio() {
+      const letras = "0123456789ABCDEF";
+      let color = "#";
+      for (let i = 0; i < 6; i++) {
+        color += letras[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
+
+    // Cambiar el color del título
+    const titulo = document.getElementById("titulo");
+    titulo.style.color = generarColorAleatorio();
+
+    // Cambiar el color de fondo de las cajas
+    const cajas = document.querySelectorAll(".caja");
+    cajas.forEach(caja => {
+      caja.style.backgroundColor = generarColorAleatorio();
+    });
+  </script>
+</body>
+</html>

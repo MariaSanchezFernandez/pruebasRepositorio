@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jolly+Lodger&display=swap" rel="stylesheet">
     
+    
 
 </head>
 <body class="scroll">
@@ -42,9 +43,11 @@
     </section>
     <section class="sobreMi" id="sobreMi">
         <h1>¡Hola!</h1>
-        <h2>Soy María Sánchez Fernández, especializada en desarrollo de aplicaciones web y móviles</h2>
+        <h2>Soy María Sánchez Fernández, especializada en <span style="text-decoration: underline;
+            text-decoration-color: #0ACF83;
+            text-underline-offset: 5px;">desarrollo de aplicaciones web y móviles</span></h2>
         <p>Actualmente estoy formándome en este sector tan amplio del desarrollo de aplicaciones, recogiendo experiencia de diferentes proyectos que me plantean y encuentro. Gracias a esto, me considero una persona eficaz, resolutiva, proactiva y comprometida con el trabajo. 
-        Me adapto rápidamente a nuevos entornos y tecnologías, lo que me permite enfrentarme a cualquier reto que se me proponga. 
+        Me adapto rápidamente a nuevos entornos y tecnologías, lo que me permite enfrentarme a cualquier reto que se me proponga. <br><br> Mi objetivo principal es seguir asumiendo nuevos retos que me permitan consolidar mi experiencia, aportar valor a los proyectos en los que participe y evolucionar continuamente en mi carrera profesional dentro de este campo.
         </p>
         <h1 class="tituloMalSituado">Habilidades técnicas</h1>
 
@@ -78,11 +81,11 @@
             </div>
         </div>
         
-        <a download="cv/CV_MaríaSánchezFernández.png" href="cv/CV_MaríaSánchezFernández.png" class="button button--stroke" data-block="button">
+        <a download="CV_MaríaSánchezFernández.png" href="cv/CV_MaríaSánchezFernández.png" class="button button--stroke" data-block="button" id="downloadCV">
             <span class="button__flair"></span>
             <span class="button__label">Descargar CV</span>
         </a>
-         <a download="cv/CV_MaríaSánchezFernández.png" href="cv/CV_MaríaSánchezFernández.png" ><button class="botonMovil">Descargar CV</button></a>       
+         <a download="cv/CV_MaríaSánchezFernández.png" href="cv/CV_MaríaSánchezFernández.png" id="downloadCV"><button class="botonMovil" >Descargar CV</button></a>       
         
 
     </section>
@@ -100,8 +103,8 @@
                         <h1>Mapamundi</h1>
                         <p>Aplicación Android creada usando Android Studio y Kotlin con su correspondiente navegación. Trata sobre las diferentes épocas de la historia con un breve resumen de cada una acompañada de imágenes.</p>
                         <div class="botonesAppyPrototipo">
-                            <a href="https://github.com/MariaSanchezFernandez/Proyecto2Trimestre"><button>Ver app</button></a>
-                            <a href="https://www.figma.com/design/OzWuhJlYiDLkKRYxLMk4HT/Untitled?node-id=0-1&t=TZE0zoFLsZF2ZaPq-1"><button>Ver prototipo</button></a>
+                            <a href="https://github.com/MariaSanchezFernandez/Proyecto2Trimestre" target="_blank"><button>Ver app</button></a>
+                            <a href="https://www.figma.com/design/OzWuhJlYiDLkKRYxLMk4HT/Untitled?node-id=0-1&t=TZE0zoFLsZF2ZaPq-1" target="_blank"><button>Ver prototipo</button></a>
                             
                         </div>
                     </div>
@@ -113,10 +116,11 @@
                     
                     <div class="letrasPlansLanding">
                         <img src="../img/logoPlans.png" alt="Logo Plans">
-                        <p>Web completamente funcional creada usando HTML, CSS, Javascript y base de datos. Contiene un registro inicial al que se accede a una plataforma que te informa sobre las distintas peliculas y series, divididas por géneros con su correspondiente navegación. Trabajo en grupo</p>
+                        <p>Proyecto colaborativo en el que se diseñó y programó tanto el backend como el frontend para crear una web de reseñas de películas y series. Para almacenar los datos de las películas y series, de los usuarios y los comentarios se creó una base de datos propia. La inspiración para este proyecto son páginas como Letterboxd o FilmAffinity.
+                            </p>
                         <div class="botonesAppyPrototipo">
-                            <a href="https://github.com/devJuanMartinez/Plans"><button>Ver app</button></a>
-                            <a href="https://www.figma.com/design/NzMOh5BqpUClkfFmLgbuoB/Plans?node-id=0-1&t=3ApfFL80XnxcPSU6-1"><button>Ver prototipo</button></a>
+                            <a href="https://github.com/devJuanMartinez/Plans" target="_blank"><button>Ver app</button></a>
+                            <a href="https://www.figma.com/design/NzMOh5BqpUClkfFmLgbuoB/Plans?node-id=0-1&t=3ApfFL80XnxcPSU6-1" target="_blank"><button>Ver prototipo</button></a>
                         </div>
                     </div>
                 </div>
@@ -128,10 +132,10 @@
                     </div>
                     <div class="letrasMovieList">
                         <h1>MovieList</h1>
-                        <p>Aplicación Android creada con Andorid Studio usando Kotlin. Trata sobre las distintas películas y seríes que existen, informando brevemente sobre ellas, con su correspondiente navegación y funcionalidad. Trabajo en grupo.</p>
+                        <p>Proyecto colaborativo basado en la puntuación y seguimiento de películas, creada en Android Studio usando una Api externa, incluyendo inició de sesión y navegación.</p>
                         <div class="botonesAppyPrototipo">
-                            <a href="https://github.com/MariaSanchezFernandez/proyectoProgramacion"><button>Ver app</button></a>
-                            <a href="https://www.figma.com/design/tjBy4oQgdvBNGBjd5v4xYe/Proyecto-Movie-API?node-id=0-1&t=YZOz2tvPnGm11uHk-1"><button>Ver prototipo</button></a>
+                            <a href="https://github.com/MariaSanchezFernandez/proyectoProgramacion" target="_blank"><button>Ver app</button></a>
+                            <a href="https://www.figma.com/design/tjBy4oQgdvBNGBjd5v4xYe/Proyecto-Movie-API?node-id=0-1&t=YZOz2tvPnGm11uHk-1" target="_blank"><button>Ver prototipo</button></a>
                         </div>
                     </div>
                 </div>
@@ -156,19 +160,19 @@
             <form action="https://formspree.io/f/xjkkpyap" method="POST" class="formularioContacto">
                 <div class="campoFormulario">
                 
-                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                    <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
                 </div>
                 <div class="campoFormulario">
                     
-                    <input type="text" id="apellido" name="apellido" placeholder="Tu apellido" required>
+                    <input type="text" id="apellido" name="apellido" placeholder="Apellido" required>
                 </div>
                 <div class="campoFormulario">
                     
-                    <input type="email" id="email" name="email" placeholder="Tu email" required>
+                    <input type="email" id="email" name="email" placeholder="Email" required>
                 </div>
-                <div class="campoFormulario">
+                <div class="campoFormulario" >
                     
-                    <input type="text" id="asunto" name="asunto" placeholder="Asunto" required>
+                    <textarea id="message" name="message" placeholder="Mensaje" required ></textarea>
                 </div>
                 <div class="campoFormulario">
                     <button type="submit">Enviar</button>
@@ -191,7 +195,7 @@
         </div>
     </footer>
     
-    <button id="scrollToTop" class="scroll-to-top">↑</button>
+    <button id="scrollToTop" class="scroll-to-top">▲</button>
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
@@ -239,28 +243,27 @@
     //Cambiar color de la cabecera al pasar por sobreMi Y Contacto
 
     document.addEventListener('DOMContentLoaded', () => {
-    const headerLinks = document.querySelectorAll('.cabecera');
-    const sobreMi = document.getElementById('sobreMi');
+        const headerLinks = document.querySelectorAll('.cabecera');
+        const sobreMi = document.getElementById('sobreMi');
 
-    // Configurar IntersectionObserver
-    const observerOptions = {
-        root: null,
-        threshold: 0.5, // Cambia al 50% de visibilidad
-    };
+        const observerOptions = {
+            root: null,
+            threshold: 0.5, 
+        };
 
-    const observerCallback = (entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                headerLinks.forEach((link) => link.classList.add('cabecera-verde'));
-            } else {
-                headerLinks.forEach((link) => link.classList.remove('cabecera-verde'));
-            }
-        });
-    };
+        const observerCallback = (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    headerLinks.forEach((link) => link.classList.add('cabecera-verde'));
+                } else {
+                    headerLinks.forEach((link) => link.classList.remove('cabecera-verde'));
+                }
+            });
+        };
 
-    const observer = new IntersectionObserver(observerCallback, observerOptions);
-    observer.observe(sobreMi);
-});
+        const observer = new IntersectionObserver(observerCallback, observerOptions);
+        observer.observe(sobreMi);
+    });
 
 
 
@@ -374,8 +377,37 @@
     });
 });
 
+    // Color de formulario cambiado cuando esté relleno
+    const inputsAndTextareas = document.querySelectorAll('input, textarea');
+
+    inputsAndTextareas.forEach(element => {
+        element.addEventListener('input', () => {
+            if (element.value.trim() !== '') {
+                element.classList.add('filled'); 
+            } else {
+                element.classList.remove('filled'); 
+            }
+        });
+    });
+
+    //Confetti
+
+    // Obtener el botón de descarga
+const downloadButton = document.getElementById('downloadCV');
+
+// Evento de clic en el botón
+downloadButton.addEventListener('click', () => {
+    // Llamar a la función de confeti
+    confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { x: 0.5, y: 0.5 }
+    });
+});
+
     </script>
 
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
 
 
 
