@@ -55,8 +55,8 @@
 
             <div class="fotosHabiliadesTecnicas">
                 <div >
-                    <img src="img/swift.png" alt="">
-                    <img src="img/kotlin.png" alt="">
+                    <img src="img/Swift.png" alt="">
+                    <img src="img/Kotlin.png" alt="">
                     <img src="img/html.png" alt="">
                     <img src="img/css.png" alt="">
                     <img src="img/javaScript.png" alt="">
@@ -65,7 +65,7 @@
                 <div>
                     <img src="img/github.png" alt="">
                     <img src="img/visualStudioCode.png" alt="">
-                    <img src="img/figma.png" alt="">
+                    <img src="img/Figma.png" alt="">
                     <img src="img/wordpress.png" alt="">
                     <img src="img/mySql.png" alt="">
 
@@ -81,11 +81,11 @@
             </div>
         </div>
         
-        <a download="CV_MaríaSánchezFernández.png" href="cv/CV_MaríaSánchezFernández.png" class="button button--stroke" data-block="button" id="downloadCV">
+        <a download="cv/CV_MaríaSánchezFernández.pdf" href="cv/CV_MaríaSánchezFernández.pdf" class="button button--stroke" data-block="button" id="downloadCV">
             <span class="button__flair"></span>
             <span class="button__label">Descargar CV</span>
         </a>
-         <a download="cv/CV_MaríaSánchezFernández.png" href="cv/CV_MaríaSánchezFernández.png" id="downloadCV"><button class="botonMovil" >Descargar CV</button></a>       
+        <a download="cv/CV_MaríaSánchezFernández.pdf" href="cv/CV_MaríaSánchezFernández.pdf" id="downloadCV"><button class="botonMovil" >Descargar CV</button></a>       
         
 
     </section>
@@ -392,18 +392,19 @@
 
     //Confetti
 
-    // Obtener el botón de descarga
-const downloadButton = document.getElementById('downloadCV');
+    
 
-// Evento de clic en el botón
-downloadButton.addEventListener('click', () => {
-    // Llamar a la función de confeti
-    confetti({
+    // Obtener el botón por su ID
+    const button = document.getElementById('downloadCV');
+
+    // Configurar el evento de clic para lanzar confetti
+    button.addEventListener('click', () => {
+      confetti({
         particleCount: 100,
         spread: 70,
-        origin: { x: 0.5, y: 0.5 }
+        origin: { y: 0.6 },
+      });
     });
-});
 
     </script>
 
