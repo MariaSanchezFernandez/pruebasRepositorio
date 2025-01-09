@@ -196,6 +196,18 @@ header a{
     background-color: #0ACF83;
 }
 
+@media (max-height: 800px) {
+    .bola {
+        height: 0;
+    width: 0;
+    }
+
+    .card{
+        height: auto !important;
+    }
+}
+
+
 @media (max-width:768px){
     .nombreTitulo{
         font-size: 30px;
@@ -863,7 +875,7 @@ header a{
 
 @media (max-height: 800px) {
     .contacto {
-        height: 100vh; /* Cambia a auto cuando el viewport es más pequeño */
+        height: auto;
     }
 }
 
