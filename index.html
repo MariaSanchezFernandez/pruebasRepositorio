@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>María Sánchez Fernández</title>
-    <link rel="shortcut icon" href="img/msf.ico" />
+    <link rel="shortcut icon" href="./img/msf.png" />
 
     <link rel="stylesheet" href="styles.css">
     <!-- FUENTES DE LETRAS -->
@@ -35,9 +35,6 @@
                 <span>UI/UX</span>
                 <span>Backend</span>
                 <span>IOS</span>
-
-                
-    
             </div>
         </div>
         
@@ -57,19 +54,19 @@
 
             <div class="fotosHabiliadesTecnicas">
                 <div >
-                    <img src="img/Swift.png" alt="">
-                    <img src="img/Kotlin.png" alt="">
-                    <img src="img/html.png" alt="">
-                    <img src="img/css.png" alt="">
-                    <img src="img/javaScript.png" alt="">
+                    <img src="./img/Swift.png" alt="">
+                    <img src="./img/Kotlin.png" alt="">
+                    <img src="./img/html.png" alt="">
+                    <img src="./img/css.png" alt="">
+                    <img src="./img/javaScript.png" alt="">
                     
                 </div>
                 <div>
-                    <img src="img/github.png" alt="">
-                    <img src="img/visualStudioCode.png" alt="">
-                    <img src="img/Figma.png" alt="">
-                    <img src="img/wordpress.png" alt="">
-                    <img src="img/mySql.png" alt="">
+                    <img src="./img/github.png" alt="">
+                    <img src="./img/visualStudioCode.png" alt="">
+                    <img src="./img/Figma.png" alt="">
+                    <img src="./img/wordpress.png" alt="">
+                    <img src="./img/mySql.png" alt="">
 
                 </div>
             </div>
@@ -99,7 +96,7 @@
             <div class="card" id="tarjeta1">
                 <div class="proyectoMapamundi">
                     <div class="imagenMapamundi">
-                        <img src="../img/mapamundi.png" alt="">
+                        <img src="./img/mapamundi.png" alt="">
                     </div>
                     <div class="letrasMapamundi">
                         <h1>Mapamundi</h1>
@@ -117,7 +114,7 @@
                     <div class="blur-background"></div>
                     
                     <div class="letrasPlansLanding">
-                        <img src="../img/logoPlans.png" alt="Logo Plans">
+                        <img src="./img/logoPlans.png" alt="Logo Plans">
                         <p>Proyecto colaborativo en el que se diseñó y programó tanto el backend como el frontend para crear una web de reseñas de películas y series. Para almacenar los datos de las películas y series, de los usuarios y los comentarios se creó una base de datos propia. La inspiración para este proyecto son páginas como Letterboxd o FilmAffinity.
                         </p>
                         <span>Proyecto colaborativo en el que se diseñó y programó tanto el backend como el frontend para crear una web de reseñas de películas y series. Para almacenar los datos de las películas y series, de los usuarios y los comentarios se creó una base de datos propia. </span>
@@ -159,26 +156,22 @@
     </section>
     <section class="contacto" id="contacto">
         <h2>¿Hablamos y así me cuentas tus ideas?</h2>
-            <form action="https://formspree.io/f/xjkkpyap" method="POST" class="formularioContacto">
-                <div class="campoFormulario">
-                
+        <br>
+            <form id="formulario" action="https://formspree.io/f/xjkkpyap" method="POST" class="formularioContacto">
+                <div class="campoFormulario">               
                     <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
                 </div>
                 <div class="campoFormulario">
-                    
                     <input type="text" id="apellido" name="apellido" placeholder="Apellido" required>
                 </div>
-                <div class="campoFormulario">
-                    
+                <div class="campoFormulario">                    
                     <input type="email" id="email" name="email" placeholder="Email" required >
                 </div>
-                <div class="campoFormulario" >
-                    
+                <div class="campoFormulario" >                   
                     <textarea id="message" name="message" placeholder="Mensaje" required ></textarea>
                 </div>
                 <div class="campoFormulario">
                     <button type="submit">Enviar</button>
-
                 </div>
             </form>
     
@@ -190,9 +183,10 @@
                 <p>¡Muchas gracias por visitar mi portfolio web!</p>
             </div>
             <div class="socials">
-                <a href="https://api.whatsapp.com/send?phone=34681085558"><img src="img/telefono.png" alt="Teléfono"></a>
-                <a href="mailto:sanchez.fdez.maria@gmail.com"><img src="img/correo.png" alt="Correo"></a>
-                <a href="https://github.com/MariaSanchezFernandez"><img src="img/github.png" alt="Correo"></a>
+                <a href="https://api.whatsapp.com/send?phone=34681085558"><img src="./img/telefono.png" alt="Teléfono"></a>
+                <a href="mailto:sanchez.fdez.maria@gmail.com"><img src="./img/correo.png" alt="Correo"></a>
+                <a href="https://github.com/MariaSanchezFernandez"><img src="./img/github.png" alt="Correo"></a>
+                <a href="https://www.linkedin.com/in/mariasanchezfernandez/"><img src="./img/Linkedin.png" alt=""></a>
             </div>
         </div>
     </footer>
@@ -230,16 +224,13 @@
     //Bola para dar comienzo con el scroll 
 
     let bolaComienzo = document.getElementById('bola');
-    let header = document.getElementById('header');
-
-    header.style.visibility = "hidden";
 
     bolaComienzo.addEventListener('click', () => {
         document.body.classList.remove('scroll');
         document.querySelector('#sobreMi').scrollIntoView({
             behavior: 'smooth'
         })
-        header.style.visibility = "visible"
+        
     })
 
     //Cambiar color de la cabecera al pasar por sobreMi Y Contacto
@@ -388,6 +379,13 @@
                 element.classList.remove('filled'); 
             }
         });
+    });
+
+    let formulario = document.getElementById('formulario');
+    formulario.addEventListener('submit', function() {
+        setTimeout(function() {
+            formulario.reset();
+        }, 0); 
     });
 
     //Confetti

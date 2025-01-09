@@ -9,13 +9,8 @@ body, html {
     scroll-behavior: smooth;
 }
 
-.scroll{
-    overflow: hidden;
-}
 
-::-webkit-scrollbar {
-    display: none;
-}
+
 /*Cabecera https://kennethnym.com/blog/progressive-blur-in-css/*/
 
 header {
@@ -30,8 +25,6 @@ header {
     padding: 30px 0; 
     height: 50px;
     transition: background-color 0.3s ease; /* Animación suave */
-    
-    
     text-align: center; 
 }
 
@@ -191,11 +184,16 @@ header a{
 
 .bola{
     background-color: #0F172A;
-    height: 40px;
-    width: 40px;
+    height: 45px;
+    width: 45px;
     border-radius: 100px;
     position: absolute;
     bottom: 70px;
+    transition: all 0.3s ease;
+}
+
+.bola:hover{
+    background-color: #0ACF83;
 }
 
 @media (max-width:768px){
@@ -239,7 +237,7 @@ header a{
 .sobreMi p{
     font-weight: 200;
     font-size: 18px;
-    width: 70%;
+    width: 100%;
     padding: 0px 0px;
     text-align: center;
     word-spacing: 3px;
@@ -437,6 +435,13 @@ header a{
     }
     
 }
+
+
+@media (max-height: 800px) {
+    .sobreMi {
+        height: auto; 
+    }
+}
 /*Proyectos*/
 
 .proyectos {
@@ -517,7 +522,7 @@ header a{
 }
 
 .imagenMapamundi {
-    width: 100%; 
+    width: 50%; 
     height: 100%;
     overflow: hidden; 
     position: relative;
@@ -830,7 +835,7 @@ header a{
     }
 
     .letrasPlansLanding{
-        margin-top: -100px;
+        margin-top: -40px;
 
     }
 
@@ -853,6 +858,13 @@ header a{
     align-items: center;
     padding: 50px ;
     height: 70vh;
+}
+
+
+@media (max-height: 800px) {
+    .contacto {
+        height: 100vh; /* Cambia a auto cuando el viewport es más pequeño */
+    }
 }
 
 .contacto h2 {
@@ -879,7 +891,7 @@ header a{
 
 @media (max-width:550px){
     .contacto{
-        height: 100vh;
+        height: 80vh;
     }
 }
 form {
@@ -1124,4 +1136,10 @@ footer .footerContent .socials img:hover {
 .scroll-to-top:hover {
     background-color: #0ACF83;
     color: #0d734c;
+}
+
+@media (max-width: 550px) {
+    .scroll-to-top {
+        right: -100px;
+    }
 }
