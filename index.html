@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>María Sánchez Fernández</title>
+    <link rel="shortcut icon" href="img/msf.ico" />
+
     <link rel="stylesheet" href="styles.css">
     <!-- FUENTES DE LETRAS -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
@@ -47,7 +49,7 @@
             text-decoration-color: #0ACF83;
             text-underline-offset: 5px;">desarrollo de aplicaciones web y móviles</span></h2>
         <p>Actualmente estoy formándome en este sector tan amplio del desarrollo de aplicaciones, recogiendo experiencia de diferentes proyectos que me plantean y encuentro. Gracias a esto, me considero una persona eficaz, resolutiva, proactiva y comprometida con el trabajo. 
-        Me adapto rápidamente a nuevos entornos y tecnologías, lo que me permite enfrentarme a cualquier reto que se me proponga. <br><br> Mi objetivo principal es seguir asumiendo nuevos retos que me permitan consolidar mi experiencia, aportar valor a los proyectos en los que participe y evolucionar continuamente en mi carrera profesional dentro de este campo.
+        Me adapto rápidamente a nuevos entornos y tecnologías, lo que me permite enfrentarme a cualquier reto que se me proponga. <br><br> <span>Mi objetivo principal es seguir asumiendo nuevos retos que me permitan consolidar mi experiencia, aportar valor a los proyectos en los que participe y evolucionar continuamente en mi carrera profesional dentro de este campo.</span>
         </p>
         <h1 class="tituloMalSituado">Habilidades técnicas</h1>
 
@@ -81,11 +83,11 @@
             </div>
         </div>
         
-        <a download="cv/CV_MaríaSánchezFernández.pdf" href="cv/CV_MaríaSánchezFernández.pdf" class="button button--stroke" data-block="button" id="downloadCV">
+        <a download="CV_MaríaSánchezFernández.pdf" href="./cv/CV_MaríaSánchezFernández.pdf" class="button button--stroke" data-block="button" id="downloadCV">
             <span class="button__flair"></span>
             <span class="button__label">Descargar CV</span>
         </a>
-        <a download="cv/CV_MaríaSánchezFernández.pdf" href="cv/CV_MaríaSánchezFernández.pdf" id="downloadCV"><button class="botonMovil" >Descargar CV</button></a>       
+        <button class="botonMovil" ><a download="CV_MaríaSánchezFernández.pdf" href="./cv/CV_MaríaSánchezFernández.pdf" id="downloadCV">Descargar CV</a></button>       
         
 
     </section>
@@ -117,7 +119,8 @@
                     <div class="letrasPlansLanding">
                         <img src="../img/logoPlans.png" alt="Logo Plans">
                         <p>Proyecto colaborativo en el que se diseñó y programó tanto el backend como el frontend para crear una web de reseñas de películas y series. Para almacenar los datos de las películas y series, de los usuarios y los comentarios se creó una base de datos propia. La inspiración para este proyecto son páginas como Letterboxd o FilmAffinity.
-                            </p>
+                        </p>
+                        <span>Proyecto colaborativo en el que se diseñó y programó tanto el backend como el frontend para crear una web de reseñas de películas y series. Para almacenar los datos de las películas y series, de los usuarios y los comentarios se creó una base de datos propia. </span>
                         <div class="botonesAppyPrototipo">
                             <a href="https://github.com/devJuanMartinez/Plans" target="_blank"><button>Ver app</button></a>
                             <a href="https://www.figma.com/design/NzMOh5BqpUClkfFmLgbuoB/Plans?node-id=0-1&t=3ApfFL80XnxcPSU6-1" target="_blank"><button>Ver prototipo</button></a>
@@ -156,7 +159,6 @@
     </section>
     <section class="contacto" id="contacto">
         <h2>¿Hablamos y así me cuentas tus ideas?</h2>
-        <div class="blurContacto">
             <form action="https://formspree.io/f/xjkkpyap" method="POST" class="formularioContacto">
                 <div class="campoFormulario">
                 
@@ -168,7 +170,7 @@
                 </div>
                 <div class="campoFormulario">
                     
-                    <input type="email" id="email" name="email" placeholder="Email" required>
+                    <input type="email" id="email" name="email" placeholder="Email" required >
                 </div>
                 <div class="campoFormulario" >
                     
@@ -179,7 +181,6 @@
 
                 </div>
             </form>
-        </div>
     
     </section>
     <footer>
@@ -191,6 +192,7 @@
             <div class="socials">
                 <a href="https://api.whatsapp.com/send?phone=34681085558"><img src="img/telefono.png" alt="Teléfono"></a>
                 <a href="mailto:sanchez.fdez.maria@gmail.com"><img src="img/correo.png" alt="Correo"></a>
+                <a href="https://github.com/MariaSanchezFernandez"><img src="img/github.png" alt="Correo"></a>
             </div>
         </div>
     </footer>
@@ -354,8 +356,6 @@
     new Button(buttonElement);
     });
 
-    //Footer 
-
     //Scroll hacia arriba
 
     document.addEventListener('DOMContentLoaded', () => {
@@ -392,12 +392,8 @@
 
     //Confetti
 
-    
-
-    // Obtener el botón por su ID
     const button = document.getElementById('downloadCV');
 
-    // Configurar el evento de clic para lanzar confetti
     button.addEventListener('click', () => {
       confetti({
         particleCount: 100,

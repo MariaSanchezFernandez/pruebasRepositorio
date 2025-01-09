@@ -1,4 +1,3 @@
-
 body, html {
     padding: 0;
     margin: 0;
@@ -9,8 +8,6 @@ body, html {
     background-attachment: fixed;
     scroll-behavior: smooth;
 }
-
-
 
 .scroll{
     overflow: hidden;
@@ -108,8 +105,6 @@ header a{
         
     }
 }
-
-
 
 /* INICIO */
 
@@ -386,6 +381,11 @@ header a{
         transition: 0.3s;
     }
 
+    .botonMovil a{
+        text-decoration: none;
+        color: white;
+    }
+
 
 
     .botonMovil button:hover{
@@ -430,6 +430,10 @@ header a{
 
     .sobreMi{
         padding: sss0px;
+    }
+
+    .sobreMi span{
+        display: none;
     }
     
 }
@@ -486,24 +490,11 @@ header a{
     margin-bottom: 20px;
 }
 
-@media (max-width: 1024px) {
-    /*
-    .tarjetasProyectosPrincipales {
-        padding-bottom: 20vh;
-    }
-    */
-}
-
 @media (max-width:768px){
     .card {
         width: 80vw;
         height: 60vh; 
     }
-    /*
-    .tarjetasProyectosPrincipales {
-        padding-bottom: 25vh;
-    }
-    */
 }
 
 @media (max-width: 480px) {
@@ -511,11 +502,6 @@ header a{
         width: 70vw; 
         height: 60vh; 
     }
-    /*
-    .tarjetasProyectosPrincipales {
-        padding-bottom: 30vh;
-    }
-    */
 }
 
 /*Mapamundi*/
@@ -531,20 +517,20 @@ header a{
 }
 
 .imagenMapamundi {
-    width: 100%; /* Ocupa todo el ancho del contenedor */
-    height: 100%; /* Ocupa todo el alto del contenedor */
-    overflow: hidden; /* Oculta lo que sobresale */
-    position: relative; /* Posicionamiento relativo para controlar la imagen dentro */
+    width: 100%; 
+    height: 100%;
+    overflow: hidden; 
+    position: relative;
 }
 
 .imagenMapamundi img {
-    position: absolute; /* Posicionamiento absoluto dentro del contenedor */
-    top: 50%; /* Centrado verticalmente */
-    right: 0; /* Pegado al lado derecho */
-    transform: translateY(-50%); /* Ajuste para centrar verticalmente */
-    width: auto; /* La anchura se ajusta automáticamente */
-    height: 120%; /* Más alto que el contenedor para asegurarse de que se rellena */
-    object-fit: cover; /* Se recorta adecuadamente */
+    position: absolute; 
+    top: 50%; 
+    right: 0; 
+    transform: translateY(-50%); 
+    width: auto; 
+    height: 120%; 
+    object-fit: cover;
 }
 
 
@@ -638,7 +624,9 @@ header a{
 
 }
 
-
+.letrasPlansLanding span{
+    display: none;
+}
 
 .imagenPlansLanding img{
     width: 100%;
@@ -831,6 +819,20 @@ header a{
         padding-bottom: 0px;
     }
     
+    .letrasPlansLanding p{
+        display: none;
+    }
+
+    .letrasPlansLanding span{
+        display: block;
+        width: 80%;
+        padding: 15px 0px 10px 0px;
+    }
+
+    .letrasPlansLanding{
+        margin-top: -100px;
+
+    }
 
 }
 
@@ -875,6 +877,11 @@ header a{
     max-width: 800px;
 }
 
+@media (max-width:550px){
+    .contacto{
+        height: 100vh;
+    }
+}
 form {
     max-width: 800px;
     width: 80vw;
@@ -923,10 +930,10 @@ form {
 .campoFormulario input:-webkit-autofill { background-color: #0F172A; }
 
 .campoFormulario input#asunto {
-    height: 150px; /* Altura específica para simular el textarea */
-    text-align: left; /* Alineación para texto largo */
-    overflow-y: auto; /* Permitir el desplazamiento si el contenido es demasiado largo */
-    display: block; /* Asegúrate de que sea un bloque */
+    height: 150px; 
+    text-align: left; 
+    overflow-y: auto; 
+    display: block; 
 }
 
 .campoFormulario textarea{
@@ -961,10 +968,10 @@ form {
 .campoFormulario textarea:-webkit-autofill { background-color: #0F172A; }
 
 .campoFormulario textarea#asunto {
-    height: 150px; /* Altura específica para simular el textarea */
-    text-align: left; /* Alineación para texto largo */
-    overflow-y: auto; /* Permitir el desplazamiento si el contenido es demasiado largo */
-    display: block; /* Asegúrate de que sea un bloque */
+    height: 150px; 
+    text-align: left; 
+    overflow-y: auto; 
+    display: block; 
 }
 
 .campoFormulario button{
@@ -1093,10 +1100,7 @@ footer .footerContent .socials img:hover {
     }
 }
 
-
-
 /*Scroll hacia arriba*/
-
 .scroll-to-top {
     position: fixed;
     bottom: 60px; 
@@ -1108,15 +1112,16 @@ footer .footerContent .socials img:hover {
     border: none;
     border-radius: 50%;
     font-size: 20px;
-    display: none; /* Oculto por defecto */
+    display: none;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     z-index: 1000;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
-    transition: opacity 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
 }
 
 .scroll-to-top:hover {
     background-color: #0ACF83;
+    color: #0d734c;
 }
