@@ -7,6 +7,7 @@
     <link rel="shortcut icon" href="./img/msf.png" />
 
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="responsive.css">
     <!-- FUENTES DE LETRAS -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
@@ -226,7 +227,6 @@
     let bolaComienzo = document.getElementById('bola');
 
     bolaComienzo.addEventListener('click', () => {
-        document.body.classList.remove('scroll');
         document.querySelector('#sobreMi').scrollIntoView({
             behavior: 'smooth'
         })
@@ -349,7 +349,6 @@
 
     //Scroll hacia arriba
 
-    document.addEventListener('DOMContentLoaded', () => {
     const scrollToTopButton = document.getElementById('scrollToTop');
 
     window.addEventListener('scroll', () => {
@@ -366,7 +365,7 @@
             behavior: 'smooth'
         });
     });
-});
+
 
     // Color de formulario cambiado cuando esté relleno
     const inputsAndTextareas = document.querySelectorAll('input, textarea');

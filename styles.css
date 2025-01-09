@@ -66,39 +66,6 @@ header a{
     background-color: #0ACF83 !important; /* Cambia la línea decorativa a verde */
 }
 
-@media (max-width:800px){
-    header{
-        justify-content: center;
-    }
-    .cabecera {
-        font-size: 22px;
-        margin: 0px 40px;
-    }
-}
-
-@media (max-width:500px) and (min-width:0px){
-    header{
-        display: none;
-    }
-    .cabecera {
-        font-size: 22px;
-    }
-
-    .nombreTitulo{
-        width: 60vw;
-        margin-top: -100px;
-    }
-    .bola{
-        bottom: 150px !important;
-    }
-    
-    body, html {
-        background-size:15%;
-               
-        
-    }
-}
-
 /* INICIO */
 
 .inicio{
@@ -196,30 +163,6 @@ header a{
     background-color: #0ACF83;
 }
 
-@media (max-height: 800px) {
-    .bola {
-        height: 0;
-    width: 0;
-    }
-
-    .card{
-        height: auto !important;
-    }
-}
-
-
-@media (max-width:768px){
-    .nombreTitulo{
-        font-size: 30px;
-    }
-    .inicio>h2{
-        font-size: 20px;
-    }
-    .desarrolloMovil>h2{
-        font-size: 20px;
-    }
-     
-}
 
 /*Sobre mí*/
 
@@ -352,7 +295,9 @@ header a{
     padding-left: 20px;
 
 }
-
+.letrasHabilidadesTecnicas{
+    width: 40%;
+}
 .letrasHabilidadesTecnicas h2{
     text-align: left;
     margin-top: 60px;
@@ -362,98 +307,11 @@ header a{
     text-decoration: underline;
     text-decoration-color: #0ACF83;
     text-underline-offset: 5px;
-
+    width: 100%;
     align-content: center;    
 }
 
 
-@media (max-width:768px){
-    .sobreMi h2{
-        padding: 0px 50px;
-    }
-
-    .sobreMi p{
-        padding: 0px 00px;
-    }   
-    
-    
-    .botonMovil{
-        cursor: pointer;
-        display: block;
-        width: 150px;
-        height: 45px;
-        font-family: 'Inter';
-        border-radius: 50px;
-        background-color: #0F172A;
-        font-size: 18px;
-        border: white 1px solid;
-        color: white;
-        transition: 0.3s;
-    }
-
-    .botonMovil a{
-        text-decoration: none;
-        color: white;
-    }
-
-
-
-    .botonMovil button:hover{
-        transition: 0.3s;
-        font-weight: 500;
-        background-color: #fff;
-        color: #0F172A;
-    
-    }
-
-    .button{
-        display: none;
-    }
-
-    
-    .habilidadesTecnicas{
-        display: none;
-    }
-
-    .tituloMalSituado{
-        display: none;
-    }
-    
-    .botonMovil{
-        margin-top: 40px;
-    }
-    
-}
-
-@media (max-width:550px){
-
-    .sobreMi h2{
-        width: 110%;
-        padding: 0px;
-
-    }
-    .sobreMi p{
-
-        width: 100%;
-
-    }
-
-    .sobreMi{
-        padding: sss0px;
-    }
-
-    .sobreMi span{
-        display: none;
-    }
-    
-}
-
-
-@media (max-height: 800px) {
-    .sobreMi {
-        height: auto; 
-    }
-}
 /*Proyectos*/
 
 .proyectos {
@@ -505,20 +363,6 @@ header a{
 
 .botonesAppyPrototipo button{
     margin-bottom: 20px;
-}
-
-@media (max-width:768px){
-    .card {
-        width: 80vw;
-        height: 60vh; 
-    }
-}
-
-@media (max-width: 480px) {
-    .card {
-        width: 70vw; 
-        height: 60vh; 
-    }
 }
 
 /*Mapamundi*/
@@ -638,6 +482,8 @@ header a{
 }
 .letrasPlansLanding p{
     width: 80%;
+    font-weight: 200;
+
 
 }
 
@@ -650,11 +496,6 @@ header a{
 }
 .letrasPlansLanding img{
     height: 8vh;
-}
-
-
-.letrasPlansLanding p{
-    font-weight: 200;
 }
 
 
@@ -720,138 +561,6 @@ header a{
     height: 40px;
     transition: all 0.5s;
 }
-/*Responsive de las tarjetas*/
-
-@media (min-width: 1313px) {
-    .card{
-        width: 55vw !important;
-    }
-    .botonesAppyPrototipo{
-        width: 90%;
-    }
-
-    .imagenMapamundi img{
-        height: 45vh;
-    }
-}
-
-
-@media (max-width: 1313px) {
-    .letrasMapamundi button{
-        font-size: 16px;
-    }
-}
-
-
-@media (max-width: 1137px) {
-    .letrasMapamundi button{
-        font-size: 20px;
-    }
-
-    .card {
-        width: 80vw;
-        height: 55vh; 
-    }
-
-    
-}
-
-@media (max-width:1001px){
-    .imagenMapamundi img{
-        height: 40vh;
-    }
-    
-}
-
-@media (max-width:868px){
-    .imagenMapamundi img{
-        height: 30vh;
-    }
-
-    .imagenMovieList img{
-        height: 40vh;
-    }
-
-    .botonesAppyPrototipo{
-        width: 100%;
-    }
-}
-
-@media (max-width: 780px) {
-    .imagenMapamundi img{
-        display: none;
-    }
-    .letrasMapamundi{
-        width: 100%;
-    }
-    .imagenMapamundi{
-        width: 0%;
-    }
-    .imagenPlansLanding img{
-        display: none;
-    }
-    .imagenPlansLanding{
-        width: 0%;
-    }
-    .letrasPlansLanding{
-        width: 100%;
-    }
-    .letrasPlansLanding p{
-        width: 80%;
-    
-    }
-    .letrasPlansLanding img{
-        width: 80%;
-    }
-    .imagenMovieList{
-        display: none;
-    }
-    .letrasMovieList{
-        width: 100%;
-        display: flex;
-        justify-content: space-evenly;
-        flex-direction: column;
-        align-items: center;
-        padding: 20px;
-    }
-    .card p{
-        padding-bottom: 30px;
-    }
-    .botonesAppyPrototipo button{
-        margin: 10px;
-    }
-}
-
-
-@media (max-width:425px){
-    .imagenMapamundi img{
-        height: 40vh !important;
-    }
-    .letrasMapamundi{
-        margin-top: 0px;
-        height:100%;
-        margin-right: 0px;
-    }
-    .card p{
-        padding-bottom: 0px;
-    }
-    
-    .letrasPlansLanding p{
-        display: none;
-    }
-
-    .letrasPlansLanding span{
-        display: block;
-        width: 80%;
-        padding: 15px 0px 10px 0px;
-    }
-
-    .letrasPlansLanding{
-        margin-top: -40px;
-
-    }
-
-}
 
 
 .card {
@@ -873,11 +582,6 @@ header a{
 }
 
 
-@media (max-height: 800px) {
-    .contacto {
-        height: auto;
-    }
-}
 
 .contacto h2 {
     font-size: 2rem;
@@ -901,11 +605,6 @@ header a{
     max-width: 800px;
 }
 
-@media (max-width:550px){
-    .contacto{
-        height: 80vh;
-    }
-}
 form {
     max-width: 800px;
     width: 80vw;
@@ -1113,17 +812,6 @@ footer .footerContent .socials img:hover {
 }
 
 
-@media (max-width: 768px) {
-    footer .footerContent {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    footer .footerContent .socials img {
-        height: 35px;
-    }
-}
-
 /*Scroll hacia arriba*/
 .scroll-to-top {
     position: fixed;
@@ -1148,10 +836,4 @@ footer .footerContent .socials img:hover {
 .scroll-to-top:hover {
     background-color: #0ACF83;
     color: #0d734c;
-}
-
-@media (max-width: 550px) {
-    .scroll-to-top {
-        right: -100px;
-    }
 }
