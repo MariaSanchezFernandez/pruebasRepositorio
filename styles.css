@@ -7,6 +7,10 @@ body, html {
     background-size:9%;
     background-attachment: fixed;
     scroll-behavior: smooth;
+        overflow-x: hidden; /* Evita el desplazamiento horizontal */
+        overflow-y: auto; /* Habilita el desplazamiento vertical, pero evita el automático */
+    
+    
 }
 
 
