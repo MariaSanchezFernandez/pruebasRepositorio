@@ -6,11 +6,7 @@ body, html {
     background-repeat: repeat;
     background-size:9%;
     background-attachment: fixed;
-    scroll-behavior: smooth;
-        overflow-x: hidden; /* Evita el desplazamiento horizontal */
-        overflow-y: auto; /* Habilita el desplazamiento vertical, pero evita el automático */
-    
-    
+    overflow-x: hidden;
 }
 
 
@@ -200,6 +196,7 @@ header a{
     padding: 0px 0px;
     text-align: center;
     word-spacing: 3px;
+    width: 80%;
 }
 
 .button {
@@ -319,7 +316,7 @@ header a{
 /*Proyectos*/
 
 .proyectos {
-    margin-top: 100px;
+    margin-top: 170px;
 }
 
 .tarjetasProyectosPrincipales{
@@ -335,6 +332,7 @@ header a{
 
 .tarjetasProyectosPrincipales h2{
     margin-bottom: 50px;
+    font-size: 30px;
 }
 .card {
     display: flex;
@@ -378,6 +376,7 @@ header a{
     flex-direction: row;
     justify-content: center;
     width: 100%;
+    height: 100%;
     align-items: center;
 }
 
@@ -403,7 +402,7 @@ header a{
     color: white;
     width: 50%;
     padding: 20px;
-    height: 60%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -446,21 +445,8 @@ header a{
 
 /*Plans Landing*/
 
-.proyectoPlansLanding {
-    position: relative; 
-    width: 100%;
-    height: 100%;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    align-content: center;
-    background-color: black;
-    box-sizing: border-box;
-    overflow: hidden; 
-}
-.proyectoPlansLanding .blur-background {
+
+.blur-background {
     position: absolute;
     top: 10%; 
     left: 10%; 
@@ -472,40 +458,25 @@ header a{
     z-index: 0; 
 }
 
-.letrasPlansLanding {
-    position: relative;
-    z-index: 1;
-    margin-top: -40px;
-    text-align: center;
-    color: white;
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: column;
-    align-items: center;
-    height: 40vh;
-}
-.letrasPlansLanding p{
+.letrasMovieList p{
     width: 80%;
     font-weight: 200;
-
-
 }
 
-.letrasPlansLanding span{
+.letrasMovieList span{
     display: none;
 }
 
-.imagenPlansLanding img{
+.logoPlans img{
     width: 100%;
 }
-.letrasPlansLanding img{
+.logoPlans img{
     height: 8vh;
 }
 
 
 .letrasPlansLanding button{
     cursor: pointer;
-   
     color: black;
     background-color: white;
     font-family: 'Inter', serif;
@@ -534,11 +505,11 @@ header a{
     align-items: center;
 }
 .imagenMovieList img{
-    height: 60vh;
+    height: 50vh;
 }
 .imagenMovieList{
     width: 40%;
-    margin: 0px 15px;
+    margin: 10px 15px;
 }
 .letrasMovieList{
     color: white;
@@ -549,6 +520,7 @@ header a{
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    padding: 20px;
 }
 
 .letrasMovieList button{
@@ -565,7 +537,6 @@ header a{
     height: 40px;
     transition: all 0.5s;
 }
-
 
 .card {
     width: 70vw; 

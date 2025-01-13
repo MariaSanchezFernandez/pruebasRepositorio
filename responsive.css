@@ -76,9 +76,7 @@
         align-items: center;
         padding: 20px;
     }
-    .card p {
-        padding-bottom: 30px;
-    }
+
     .botonesAppyPrototipo button {
         margin: 10px;
     }
@@ -145,9 +143,6 @@
     .sobreMi p {
         width: 100%;
     }
-    .sobreMi span {
-        display: none;
-    }
     .scroll-to-top {
         right: -100px;
     }
@@ -198,16 +193,20 @@
     .card p {
         padding-bottom: 0px;
     }
-    .letrasPlansLanding p {
+    .letrasMovieList p {
         display: none;
     }
-    .letrasPlansLanding span {
+    .letrasMovieList span {
         display: block;
         width: 80%;
         padding: 15px 0 10px;
     }
-    .letrasPlansLanding {
-        margin-top: -60px;
+    .letrasMovieList {
+        margin-top: 0px;
+    }
+
+    .logoPlans{
+        height: 20px;
     }
 }
 

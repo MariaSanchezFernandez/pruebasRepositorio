@@ -91,13 +91,13 @@
     </section>
     <section class="proyectos" id="proyectos">
         <div class="tarjetasProyectosPrincipales">
+            <h2>Proyectos</h2>
+
             <br><br><br><br>
-
-
             <div class="card" id="tarjeta1">
                 <div class="proyectoMapamundi">
                     <div class="imagenMapamundi">
-                        <img src="./img/mapamundi.png" alt="">
+                        <img src="./img/mapamundii.png" alt="">
                     </div>
                     <div class="letrasMapamundi">
                         <h1>Mapamundi</h1>
@@ -110,13 +110,13 @@
                     </div>
                 </div>
             </div>
-            <div class="card" id="tarjeta2">
-                <div class="proyectoPlansLanding">
+            <div class="card tarjeta2" id="tarjeta2" >
+                <div class="proyectoMovieList">
                     <div class="blur-background"></div>
                     
-                    <div class="letrasPlansLanding">
-                        <img src="./img/logoPlans.png" alt="Logo Plans">
-                        <p>Proyecto colaborativo en el que se diseñó y programó tanto el backend como el frontend para crear una web de reseñas de películas y series. Para almacenar los datos de las películas y series, de los usuarios y los comentarios se creó una base de datos propia. La inspiración para este proyecto son páginas como Letterboxd o FilmAffinity.
+                    <div class="letrasMovieList" style="z-index: 1;">
+                        <img class="logoPlans" style="height: 80px; margin-top: 10px;" src="./img/logoPlans.png" alt="Logo Plans">
+                        <p style="width: 100%; padding: 30px;">Proyecto colaborativo en el que se diseñó y programó tanto el backend como el frontend para crear una web de reseñas de películas y series. Cuenta con su propia navegación, búsqueda, algoritmo y más. Para almacenar los datos de las películas y series, de los usuarios y los comentarios se creó una base de datos propia. La inspiración para este proyecto son páginas como Letterboxd o FilmAffinity.
                         </p>
                         <span>Proyecto colaborativo en el que se diseñó y programó tanto el backend como el frontend para crear una web de reseñas de películas y series. Para almacenar los datos de las películas y series, de los usuarios y los comentarios se creó una base de datos propia. </span>
                         <div class="botonesAppyPrototipo">
@@ -133,7 +133,7 @@
                     </div>
                     <div class="letrasMovieList">
                         <h1>MovieList</h1>
-                        <p>Proyecto colaborativo basado en la puntuación y seguimiento de películas, creada en Android Studio usando una Api externa, incluyendo inició de sesión y navegación.</p>
+                        <p style="display: block !important;">Proyecto colaborativo basado en la puntuación y seguimiento de películas, creada en Android Studio usando una Api externa, incluyendo inició de sesión y navegación, al igual como búsqueda o navegación interna. Datos importados de API pública sobre películas</p>
                         <div class="botonesAppyPrototipo">
                             <a href="https://github.com/MariaSanchezFernandez/proyectoProgramacion" target="_blank"><button>Ver app</button></a>
                             <a href="https://www.figma.com/design/tjBy4oQgdvBNGBjd5v4xYe/Proyecto-Movie-API?node-id=0-1&t=YZOz2tvPnGm11uHk-1" target="_blank"><button>Ver prototipo</button></a>
@@ -142,7 +142,7 @@
                 </div>
             </div>
         </div>
-
+        
         <div class="proyectosSecundarios">
             <h2>Más proyectos</h2>
             <div>
@@ -194,7 +194,6 @@
     
     <button id="scrollToTop" class="scroll-to-top">▲</button>
 
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
     
@@ -238,6 +237,7 @@
     document.addEventListener('DOMContentLoaded', () => {
         const headerLinks = document.querySelectorAll('.cabecera');
         const sobreMi = document.getElementById('sobreMi');
+        const contacto = document.getElementById('contacto');
 
         const observerOptions = {
             root: null,
@@ -256,6 +256,8 @@
 
         const observer = new IntersectionObserver(observerCallback, observerOptions);
         observer.observe(sobreMi);
+        observer.observe(contacto);
+
     });
 
 
